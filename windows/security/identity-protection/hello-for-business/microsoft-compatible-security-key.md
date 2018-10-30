@@ -34,7 +34,7 @@ A security key **MUST** implement the following features and extensions from the
 | --- | --- | --- | --- |
 | 1 | Resident key | This feature enables the security key to be portable, where your credential is stored on the security key | Section XXX |
 | 2 | Client pin | This feature enables security keys to protect your credentials with a second factor like PIN </br> We recommend strong multi-factor credentials for authentication to all Microsoft services| Section XXX |
-| 3 | hmac-secret | This extension ensures you can sign-in to your device when it’s off-line or in airplane mode | Section XXX |
+| 3 | hmac-secret | This extension ensures you can sign-in to your device when it's off-line or in airplane mode | Section XXX |
 | 4 | Multiple accounts per RP | This feature ensures you can use the same security key across multiple services like MSA and AAD | Section XXX |
 | #</br> | Feature / Extension trust</br> | Why is this required? </br> |
 | --- | --- | --- | 
