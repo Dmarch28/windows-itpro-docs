@@ -9,16 +9,16 @@ ms.sitesec: library
 ms.pagetype: deploy
 author: greg-lindsay
 ms.author: greg-lindsay
-ms.date: 01/03/2018
+ms.date: 10/02/2018
 ---
 
 # Overview of Windows Autopilot
 
 **Applies to**
 
--   Windows 10
+-   Windows 10
 
-Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. You can also use Windows Autopilot to reset, repurpose and recover devices.</br>
+Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. In addition, you can use Windows Autopilot to reset, repurpose and recover devices.</br>
 This solution enables an IT department to achieve the above with little to no infrastructure to manage, with a process that's easy and simple.
 
 Windows Autopilot is designed to simplify all parts of the lifecycle of Windows devices, for both IT and end users, from initial deployment through the eventual end of life. Leveraging cloud-based services, it can reduce the overall costs for deploying, managing, and retiring devices by reducing the amount of time that IT needs to spend on these processes and the amount of infrastructure that they need to maintain, while ensuring ease of use for all types of end users.
@@ -39,26 +39,15 @@ The following video shows the process of setting up Windows Autopilot:
 
 ## Benefits of Windows Autopilot
 
-Traditionally, IT pros spend a lot of time building and customizing images that will later be deployed to devices. Windows Autopilot introduces a new approach.
+Traditionally, IT pros spend a lot of time on building and customizing images that will later be deployed to devices with a perfectly good OS already installed on them. Windows Autopilot introduces a new approach.
 
-From the user's perspective, it only takes a few simple operations to make their device ready to use.
+From the users' perspective, it only takes a few simple operations to make their device ready to use.
 
-From the IT pro's perspective, the only interaction required from the end user is to connect to a network and to verify their credentials. Everything past that is automated.
-
-## Requirements
-
-Windows 10 version 1703 or higher is required to use Windows Autopilot. The following editions are supported:
-- Pro
-- Pro Education
-- Pro for Workstations
-- Enterprise
-- Education
-
-See [Windows Autopilot requirements](windows-autopilot-requirements.md) for detailed information on configuration, network, and licensing requirements.
+From the IT pros' perspective, the only interaction required from the end user, is to connect to a network and to verify their credentials. Everything past that is automated.
 
 ## Windows Autopilot Scenarios
 
-Windows Autopilot enables you to pre-register devices to your organization so that they will be fully configured with no additional intervention required by the user.
+Windows Autopilot enables you to pre-register devices to your organization so that they will be fully configured with no additional intervention required on the users' side.
 
 Windows Autopilot enables you to:
 * Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join).  See [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) for more information about the differences between these two join options.
@@ -67,8 +56,9 @@ Windows Autopilot enables you to:
 * Create and auto-assign devices to configuration groups based on a device's profile.
 * Customize OOBE content specific to the organization.
 
-See [Windows Autopilot scenarios](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot-scenarios) for more information about scenarios for using Windows Autopilot.
+See [Windows Autopilot requirements](windows-autopilot-requirements.md) for additional information on the requirements and pre-requisites for Windows Autopilot.
 
-## Related topics
+See [Windows Autopilot scenarios](https://docs.microsoft.com/en-us/windows/deployment/windows-autopilot/windows-autopilot-scenarios) for an overview of the scenarios supported by Windows Autopilot.
 
-[Enroll Windows devices in Intune by using Windows Autopilot](https://docs.microsoft.com/en-us/intune/enrollment-autopilot)
+</br>
+<iframe width="560" height="315" align="center" src="https://www.youtube-nocookie.com/embed/4K4hC5NchbE" frameborder="0" allowfullscreen></iframe>
