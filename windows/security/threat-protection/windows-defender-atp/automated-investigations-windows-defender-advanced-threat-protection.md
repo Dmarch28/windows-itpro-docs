@@ -11,14 +11,9 @@ ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
-ms.collection: M365-security-compliance 
-ms.topic: conceptual
-ms.date: 12/04/2018
 ---
 
-# Overview of Automated investigations
+# Overview of Automated investigation and remediation
 
 >Want to experience Windows Defender ATP? [Sign up for a free trial.](https://www.microsoft.com/en-us/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automated-investigations-abovefoldlink)
 
