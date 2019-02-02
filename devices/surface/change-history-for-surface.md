@@ -14,6 +14,13 @@ ms.date: 01/17/2019
 
 This topic lists new and updated topics in the Surface documentation library.
 
+## February 2019
+
+New or changed topic | Description
+--- | ---
+[Surface Asset Tag](assettag.md) | New
+
+
 ## January 2019
 
 New or changed topic | Description
