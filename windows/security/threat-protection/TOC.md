@@ -277,6 +277,11 @@
 ######## [Stop and quarantine file](windows-defender-atp/stop-and-quarantine-file-windows-defender-advanced-threat-protection-new.md)
 ######## [Initiate investigation (preview)](windows-defender-atp/initiate-autoir-investigation-windows-defender-advanced-threat-protection-new.md)
 
+####### [Indicators (preview)](windows-defender-atp/ti-indicator-windows-defender-advanced-threat-protection-new.md)
+######## [Submit Indicator](windows-defender-atp/post-ti-indicator-windows-defender-advanced-threat-protection-new.md)
+######## [List Indicators](windows-defender-atp/get-ti-indicators-collection-windows-defender-advanced-threat-protection-new.md)
+######## [Delete Indicator](windows-defender-atp/delete-ti-indicator-by-id-windows-defender-advanced-threat-protection-new.md)
+
 ####### Domain
 ######## [Get domain related alerts](windows-defender-atp/get-domain-related-alerts-windows-defender-advanced-threat-protection-new.md)
 ######## [Get domain related machines](windows-defender-atp/get-domain-related-machines-windows-defender-advanced-threat-protection-new.md)
