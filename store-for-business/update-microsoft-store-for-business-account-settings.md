@@ -1,6 +1,6 @@
 ---
-title: Update Microsoft Store for Business and Microsoft Store for Education billing account settings (Windows 10)
-description: The billing account page in Microsoft Store for Business and Microsoft Store for Education shows information about your organization that you can update, including country or region, organization contact info, agreements with Microsoft and admin approvals.
+title: Update your Billing account settings
+description: The billing account page in Microsoft Store for Business and Microsoft Store for Education, and M365 admin center shows information about your organization that you can update, including country or region, organization contact info, agreements with Microsoft and admin approvals.
 keywords: billing accounts, organization info
 ms.prod: w10
 ms.mktglfcycl: manage
@@ -10,14 +10,16 @@ author: TrudyHa
 ms.author: TrudyHa
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 03/01/2019
+ms.date: 03/18/2019
+ms.reviewer: 
+manager: dansimp
 ---
 
-# Update Microsoft Store for Business and Microsoft Store for Education account settings
+# Update Billing account settings
 A billing account contains defining information about your organization. 
 
 >[!NOTE]
->Billing accounts are available in Microsoft Store for Business, and M365 admin center preview. For more infomation, see [aka.ms/aboutM365preview](https://aka.ms/aboutM365preview).
+>Billing accounts are available in Microsoft Store for Business, and M365 admin center preview. For more information, see [aka.ms/aboutM365preview](https://aka.ms/aboutM365preview).
 
 The **Billing account** page allows you to manage organization information, purchasing agreements that you have with Microsoft, and admin approvals. The organization information and payment options are required before you can shop for products that have a price.
 
@@ -92,7 +94,7 @@ If you qualify for tax-exempt status in your market, start a service request to 
 
 **To start a service request**
 1.  Sign in to the [Microsoft Store for Business](https://businessstore.microsoft.com).
-2.	Select **Manage**, click **Support**, and then under **Store settings & configuration** select **Create technical support ticket**.
+2. Select **Manage**, click **Support**, and then under **Store settings & configuration** select **Create technical support ticket**.
 
 You’ll need this documentation:
 
@@ -101,7 +103,7 @@ You’ll need this documentation:
 | United States | Sales Tax Exemption Certificate |
 | Canada | Certificate of Exemption (or equivalent letter of authorization) |
 | Ireland | 13B/56A Tax Exemption Certificate|
-| International organizations that hold tax exaemption | Certification / letter confirmation from local tax authorities |
+| International organizations that hold tax exemption | Certification / letter confirmation from local tax authorities |
 
 ### Calculating tax
 
@@ -115,7 +117,7 @@ For example:<br>
 ($1.29 X .095) X 100 = $12.25
 
 ## Agreements
-Each billing account inculdes access to the purchasing agreements your organization has signed with Microsoft. This could include:
+Each billing account includes access to the purchasing agreements your organization has signed with Microsoft. This could include:
 - Microsoft Enterprise Agreement
 - Select agreements
 - Open agreements

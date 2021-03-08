@@ -1,12 +1,15 @@
 ---
 title: App-V Deployment Checklist (Windows 10)
-description: App-V Deployment Checklist
-author: MaggiePucciEvans
+description: Use the App-V deployment checklist to understand the recommended steps and items to consider when deploying App-V features.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # App-V Deployment Checklist
@@ -24,9 +27,9 @@ This checklist outlines the recommended steps and items to consider when deployi
 >[!NOTE]
 >Keep track of server names and associated URLs you create during installation. You'll need this information throughout the installation process.
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

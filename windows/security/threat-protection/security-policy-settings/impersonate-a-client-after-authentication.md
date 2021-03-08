@@ -2,17 +2,20 @@
 title: Impersonate a client after authentication (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Impersonate a client after authentication security policy setting.
 ms.assetid: 4cd241e2-c680-4b43-8ed0-3b391925cec5
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Impersonate a client after authentication
@@ -67,7 +70,7 @@ The following table lists the actual and effective default policy values. Defaul
 | Domain Controller Effective Default Settings | Administrators<br/>Local Service<br/>Network Service<br/>Service| 
 | Member Server Effective Default Settings | Administrators<br/>Local Service<br/>Network Service<br/>Service| 
 | Client Computer Effective Default Settings | Administrators<br/>Local Service<br/>Network Service<br/>Service| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.
@@ -102,6 +105,8 @@ On member servers, ensure that only the Administrators and Service groups (Local
 ### Potential impact
 
 In most cases, this configuration has no impact. If you have installed optional components such as ASP.NET or IIS, you may need to assign the **Impersonate a client after authentication** user right to additional accounts that are required by those components, such as IUSR\_*&lt;ComputerName&gt;*, IIS\_WPG, ASP.NET, or IWAM\_*&lt;ComputerName&gt;*.
+
+In IIS 7.0 and later, a built-in account (IUSR) replaces the IUSR_MachineName account. Additionally, a group that is named IIS_IUSRS replaces the IIS_WPG group. Because the IUSR account is a built-in account, the IUSR account no longer requires a password. The IUSR account resembles a network or local service account. For more details, see [Default permissions and user rights for IIS 7.0 and later](https://docs.microsoft.com/troubleshoot/iis/default-permissions-user-rights).
 
 ## Related topics
 

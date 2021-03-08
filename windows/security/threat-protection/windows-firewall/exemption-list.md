@@ -1,18 +1,21 @@
 ---
 title: Exemption List (Windows 10)
-description: Exemption List
+description: Learn about reasons to add devices to an exemption list in Windows Defender Firewall with Advanced Security and the trade-offs of having too many exemptions.
 ms.assetid: a05e65b4-b48d-44b1-a7f1-3a8ea9c19ed8
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Exemption List
@@ -21,7 +24,7 @@ ms.date: 04/19/2017
 -   Windows 10
 -   Windows Server 2016
 
-When you implement a server and domain isolation security model in your organization, you are likely to find some additional challenges. Key infrastructure servers such as DNS servers and DHCP servers typically must be available to all devicess on the internal network, yet secured from network attacks. However, if they must remain available to all devicess on the network, not just to isolated domain members, then these servers cannot require IPsec for inbound access, nor can they use IPsec transport mode for outbound traffic.
+When you implement a server and domain isolation security model in your organization, you are likely to find some additional challenges. Key infrastructure servers such as DNS servers and DHCP servers typically must be available to all devices on the internal network, yet secured from network attacks. However, if they must remain available to all devices on the network, not just to isolated domain members, then these servers cannot require IPsec for inbound access, nor can they use IPsec transport mode for outbound traffic.
 
 In addition to the infrastructure servers mentioned earlier, there might also be other servers on the network that trusted devices cannot use IPsec to access, which would be added to the exemption list.
 
@@ -55,4 +58,4 @@ To keep the number of exemptions as small as possible, you have several options:
 
 As with defining the boundary zone, create a formal process to approve hosts being added to the exemption list. For a model of processing requests for exemptions, see the decision flowchart in the [Boundary Zone](boundary-zone.md) section.
 
-**Next: **[Isolated Domain](isolated-domain.md)
+**Next:** [Isolated Domain](isolated-domain.md)

@@ -2,12 +2,16 @@
 title: 4770(S) A Kerberos service ticket was renewed. (Windows 10)
 description: Describes security event 4770(S) A Kerberos service ticket was renewed.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4770(S): A Kerberos service ticket was renewed.
@@ -61,7 +65,6 @@ This event generates only on domain controllers.
  <Data Name="IpPort">49964</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** Active Directory domain controller.
@@ -74,23 +77,23 @@ This event generates only on domain controllers.
 
 **Account Information:**
 
--   **Account Name** \[Type = UnicodeString\]**:** the User Principal Name (UPN) of the account that requested ticket renewal. Computer account name ends with **$** character in UPN. This field typically has the following value format: user\_account\_name@FULL\_DOMAIN\_NAME.
+- **Account Name** \[Type = UnicodeString\]**:** the User Principal Name (UPN) of the account that requested ticket renewal. Computer account name ends with **$** character in UPN. This field typically has the following value format: user\_account\_name@FULL\_DOMAIN\_NAME.
 
-    -   User account example: dadmin@CONTOSO.LOCAL
+  - User account example: dadmin@CONTOSO.LOCAL
 
-    -   Computer account example: WIN81$@CONTOSO.LOCAL
+  - Computer account example: WIN81$@CONTOSO.LOCAL
 
-        This parameter in this event is optional and can be empty in some cases.
+    This parameter in this event is optional and can be empty in some cases.
 
--   **Account Domain** \[Type = UnicodeString\]**:** the name of the Kerberos Realm that **Account Name** belongs to. This can appear in a variety of formats, including the following:
+- **Account Domain** \[Type = UnicodeString\]**:** the name of the Kerberos Realm that **Account Name** belongs to. This can appear in a variety of formats, including the following:
 
-    -   Domain NETBIOS name example: CONTOSO
+  -   Domain NETBIOS name example: CONTOSO
 
-    -   Lowercase full domain name: contoso.local
+  -   Lowercase full domain name: contoso.local
 
-    -   Uppercase full domain name: CONTOSO.LOCAL
+  -   Uppercase full domain name: CONTOSO.LOCAL
 
-        This parameter in this event is optional and can be empty in some cases.
+      This parameter in this event is optional and can be empty in some cases.
 
 **Service Information:**
 

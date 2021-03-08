@@ -2,12 +2,16 @@
 title: 4735(S) A security-enabled local group was changed. (Windows 10)
 description: Describes security event 4735(S) A security-enabled local group was changed.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4735(S): A security-enabled local group was changed.
@@ -71,7 +75,6 @@ From 4735 event you can get information about changes of **sAMAccountName** and 
  <Data Name="SidHistory">-</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** None.
@@ -109,7 +112,7 @@ From 4735 event you can get information about changes of **sAMAccountName** and 
 -   **Security ID** \[Type = SID\]**:** SID of changed group. Event Viewer automatically tries to resolve SIDs and show the group name. If the SID cannot be resolved, you will see the source data in the event.
 
 > **Note**&nbsp;&nbsp;Sometimes you can see the **Group\\Security ID** field contains an old group name in Event Viewer (as you can see in the event example). That happens because Event Viewer caches names for SIDs that it has already resolved for the current session.
-
+> 
 > **Note**&nbsp;&nbsp;**Security ID** field has the same value as new group name (**Changed Attributes&gt;SAM Account Name**). That is happens because event is generated after name was changed and SID resolves to the new name. It is always better to use SID instead of group names for queries or filtering of events, because you will know for sure that this the right object you are looking for or want to monitor.
 
 -   **Group Name** \[Type = UnicodeString\]**:** the name of the group that was changed. For example: ServiceDesk

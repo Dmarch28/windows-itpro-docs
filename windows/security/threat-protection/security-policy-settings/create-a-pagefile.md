@@ -2,17 +2,20 @@
 title: Create a pagefile - security policy setting (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Create a pagefile security policy setting.
 ms.assetid: dc087897-459d-414b-abe0-cd86c8dccdea
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Create a pagefile - security policy setting
@@ -24,7 +27,7 @@ Describes the best practices, location, values, policy management, and security 
 
 ## Reference
 
-Windows designates a section of the hard drive as virtual memory known as the page file, or more specifically, as pagefile.sys. It is used to supplement the computer’s Random Access Memory (RAM) to improve performance for programs and data that are used frequently. Although the file is hidden from browsing, you can manage it using the system settings.
+Windows designates a section of the hard drive as virtual memory known as the page file, or more specifically, as pagefile.sys. It is used to supplement the computer’s Random Access Memory (RAM) to improve performance for frequently used programs and data. Although the file is hidden from browsing, you can manage it using the system settings.
 
 This policy setting determines which users can create and change the size of a page file. It determines whether users can specify a page file size for a particular drive in the **Performance Options** box located on the **Advanced** tab of the **System Properties** dialog box or through using internal application interfaces (APIs).
 
@@ -57,7 +60,7 @@ The following table lists the actual and effective default policy values for the
 | Domain Controller Effective Default Settings | Administrators | 
 | Member Server Effective Default Settings | Administrators | 
 | Client Computer Effective Default Settings | Administrators | 
- 
+ 
 ## Policy management
 
 A restart of the device is not required for this policy setting to be effective.

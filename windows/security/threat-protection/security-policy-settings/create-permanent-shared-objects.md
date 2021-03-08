@@ -2,17 +2,20 @@
 title: Create permanent shared objects (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Create permanent shared objects security policy setting.
 ms.assetid: 6a58438d-65ca-4c4a-a584-450eed976649
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Create permanent shared objects
@@ -55,7 +58,7 @@ The following table lists the actual and effective default policy values for the
 | Domain Controller Effective Default Settings | **LocalSystem**| 
 | Member Server Effective Default Settings | **LocalSystem**| 
 | Client Computer Effective Default Settings | **LocalSystem**| 
- 
+ 
 ## Policy management
 
 This section describes different features and tools available to help you manage this policy.

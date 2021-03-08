@@ -1,18 +1,21 @@
 ---
 title: Isolated Domain (Windows 10)
-description: Isolated Domain
+description: Learn about the isolated domain, which is the primary zone for trusted devices, which use connection security and firewall rules to control communication.
 ms.assetid: d6fa8d67-0078-49f6-9bcc-db1f24816c5e
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Isolated Domain
@@ -62,4 +65,4 @@ GPOs for devices running at least Windows Vista and Windows Server 2008 should
 
     >**Note:**  For a sample template for these registry settings, see [Appendix A: Sample GPO Template Files for Settings Used in this Guide](appendix-a-sample-gpo-template-files-for-settings-used-in-this-guide.md).
 
-**Next: **[Boundary Zone](boundary-zone.md)
+**Next:** [Boundary Zone](boundary-zone.md)

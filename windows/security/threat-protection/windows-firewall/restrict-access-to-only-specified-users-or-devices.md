@@ -1,18 +1,21 @@
 ---
 title: Restrict Access to Only Specified Users or Devices (Windows 10)
-description: Restrict Access to Only Specified Users or Devices
+description: Restrict access to devices and users that are members of domain groups authorized to access that device using Windows Defender Firewall with Advanced Security.
 ms.assetid: a6106a07-f9e5-430f-8dbd-06d3bf7406df
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 08/17/2017
+ms.technology: mde
 ---
 
 # Restrict Access to Only Specified Users or Computers
@@ -47,4 +50,4 @@ The following components are required for this deployment goal:
 
 -   **Active Directory**: Active Directory supports centralized management of connection security rules by configuring the rules in one or more GPOs that can be automatically applied to all relevant devices in the domain.
 
-**Next: **[Mapping Your Deployment Goals to a Windows Defender Firewall with Advanced Security Design](mapping-your-deployment-goals-to-a-windows-firewall-with-advanced-security-design.md)
+**Next:** [Mapping Your Deployment Goals to a Windows Defender Firewall with Advanced Security Design](mapping-your-deployment-goals-to-a-windows-firewall-with-advanced-security-design.md)

@@ -6,13 +6,14 @@ ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 audience: ITPro
-author: danihalfin
-ms.author: daniha
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/19/2017
+ms.reviewer: 
 ---
 
 # Active Directory Security Groups
@@ -78,10 +79,10 @@ Groups are characterized by a scope that identifies the extent to which the grou
 
 -   Domain Local
 
-**Note**  
-In addition to these three scopes, the default groups in the **Builtin** container have a group scope of Builtin Local. This group scope and group type cannot be changed.
+> [!NOTE]
+> In addition to these three scopes, the default groups in the **Builtin** container have a group scope of Builtin Local. This group scope and group type cannot be changed.
 
- 
+ 
 
 The following table lists the three group scopes and more information about each scope for a security group.
 
@@ -110,7 +111,7 @@ The following table lists the three group scopes and more information about each
 <td><p>Accounts from any domain in the same forest</p>
 <p>Global groups from any domain in the same forest</p>
 <p>Other Universal groups from any domain in the same forest</p></td>
-<td><p>Can be converted to Domain Local scope</p>
+<td><p>Can be converted to Domain Local scope if the group is not a member of any other Universal groups</p>
 <p>Can be converted to Global scope if the group does not contain any other Universal groups</p></td>
 <td><p>On any domain in the same forest or trusting forests</p></td>
 <td><p>Other Universal groups in the same forest</p>
@@ -142,7 +143,7 @@ The following table lists the three group scopes and more information about each
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="special-identity-groups-"></a>Special identity groups
 
@@ -188,350 +189,357 @@ The following tables provide descriptions of the default groups that are located
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>[Access Control Assistance Operators](#bkmk-acasstops)</p></td>
+<td><p><a href="#bkmk-acasstops" data-raw-source="[Access Control Assistance Operators](#bkmk-acasstops)">Access Control Assistance Operators</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p></p></td>
 </tr>
 <tr class="even">
-<td><p>[Account Operators](#bkmk-accountoperators)</p></td>
+<td><p><a href="#bkmk-accountoperators" data-raw-source="[Account Operators](#bkmk-accountoperators)">Account Operators</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Administrators](#bkmk-admins)</p></td>
+<td><p><a href="#bkmk-admins" data-raw-source="[Administrators](#bkmk-admins)">Administrators</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Allowed RODC Password Replication Group](#bkmk-allowedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-allowedrodcpwdrepl" data-raw-source="[Allowed RODC Password Replication Group](#bkmk-allowedrodcpwdrepl)">Allowed RODC Password Replication Group</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Backup Operators](#bkmk-backupoperators)</p></td>
+<td><p><a href="#bkmk-backupoperators" data-raw-source="[Backup Operators](#bkmk-backupoperators)">Backup Operators</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Certificate Service DCOM Access](#bkmk-certificateservicedcomaccess)</p></td>
+<td><p><a href="#bkmk-certificateservicedcomaccess" data-raw-source="[Certificate Service DCOM Access](#bkmk-certificateservicedcomaccess)">Certificate Service DCOM Access</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Cert Publishers](#bkmk-certpublishers)</p></td>
+<td><p><a href="#bkmk-certpublishers" data-raw-source="[Cert Publishers](#bkmk-certpublishers)">Cert Publishers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Cloneable Domain Controllers](#bkmk-cloneabledomaincontrollers)</p></td>
+<td><p><a href="#bkmk-cloneabledomaincontrollers" data-raw-source="[Cloneable Domain Controllers](#bkmk-cloneabledomaincontrollers)">Cloneable Domain Controllers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p></p></td>
 </tr>
 <tr class="odd">
-<td><p>[Cryptographic Operators](#bkmk-cryptographicoperators)</p></td>
+<td><p><a href="#bkmk-cryptographicoperators" data-raw-source="[Cryptographic Operators](#bkmk-cryptographicoperators)">Cryptographic Operators</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Distributed COM Users](#bkmk-distributedcomusers)</p></td>
+<td><p><a href="#bkmk-device-owners" data-raw-source="[Device Owners](#bkmk-device-owners)">Device Owners</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[DnsUpdateProxy](#bkmk-dnsupdateproxy)</p></td>
+<td><p><a href="#bkmk-distributedcomusers" data-raw-source="[Distributed COM Users](#bkmk-distributedcomusers)">Distributed COM Users</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[DnsAdmins](#bkmk-dnsadmins)</p></td>
+<td><p><a href="#bkmk-dnsupdateproxy" data-raw-source="[DnsUpdateProxy](#bkmk-dnsupdateproxy)">DnsUpdateProxy</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Domain Admins](#bkmk-domainadmins)</p></td>
+<td><p><a href="#bkmk-dnsadmins" data-raw-source="[DnsAdmins](#bkmk-dnsadmins)">DnsAdmins</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Domain Computers](#bkmk-domaincomputers)</p></td>
+<td><p><a href="#bkmk-domainadmins" data-raw-source="[Domain Admins](#bkmk-domainadmins)">Domain Admins</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Domain Controllers](#bkmk-domaincontrollers)</p></td>
+<td><p><a href="#bkmk-domaincomputers" data-raw-source="[Domain Computers](#bkmk-domaincomputers)">Domain Computers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Domain Guests](#bkmk-domainguests)</p></td>
+<td><p><a href="#bkmk-domaincontrollers" data-raw-source="[Domain Controllers](#bkmk-domaincontrollers)">Domain Controllers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Domain Users](#bkmk-domainusers)</p></td>
+<td><p><a href="#bkmk-domainguests" data-raw-source="[Domain Guests](#bkmk-domainguests)">Domain Guests</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Enterprise Admins](#bkmk-entadmins)</p></td>
+<td><p><a href="#bkmk-domainusers" data-raw-source="[Domain Users](#bkmk-domainusers)">Domain Users</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[Enterprise Key Admins](#bkmk-enterprise-key-admins)</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[Enterprise Read-only Domain Controllers](#bkmk-entrodc)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Event Log Readers](#bkmk-eventlogreaders)</p></td>
+<td><p><a href="#bkmk-entadmins" data-raw-source="[Enterprise Admins](#bkmk-entadmins)">Enterprise Admins</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Group Policy Creator Owners](#bkmk-gpcreatorsowners)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Guests](#bkmk-guests)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Hyper-V Administrators](#bkmk-hypervadministrators)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>[IIS_IUSRS](#bkmk-iis-iusrs)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Incoming Forest Trust Builders](#bkmk-inforesttrustbldrs)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Key Admins](#key-admins)</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[Network Configuration Operators](#bkmk-networkcfgoperators)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Performance Log Users](#bkmk-perflogusers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Performance Monitor Users](#bkmk-perfmonitorusers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Pre–Windows 2000 Compatible Access](#bkmk-pre-ws2kcompataccess)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Print Operators](#bkmk-printoperators)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Protected Users](#bkmk-protectedusers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[RAS and IAS Servers](#bkmk-rasandias)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[RDS Endpoint Servers](#bkmk-rdsendpointservers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[RDS Management Servers](#bkmk-rdsmanagementservers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>[RDS Remote Access Servers](#bkmk-rdsremoteaccessservers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[Read-only Domain Controllers](#bkmk-rodc)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Remote Desktop Users](#bkmk-remotedesktopusers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Remote Management Users](#bkmk-remotemanagementusers)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>[Replicator](#bkmk-replicator)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Schema Admins](#bkmk-schemaadmins)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Server Operators](#bkmk-serveroperators)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>[Storage Replica Administrators](#storage-replica-administrators)</p></td>
+<td><p><a href="#enterprise-key-admins" data-raw-source="[Enterprise Key Admins](#enterprise-key-admins)">Enterprise Key Admins</a></p></td>
 <td><p>Yes</p></td>
 <td><p></p></td>
 <td><p></p></td>
 <td><p></p></td>
 </tr>
 <tr class="even">
-<td><p>[System Managed Accounts Group](#system-managed-accounts-group)</p></td>
-<td><p>Yes</p></td>
-<td><p></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>[Terminal Server License Servers](#bkmk-terminalserverlic)</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>[Users](#bkmk-users)</p></td>
+<td><p><a href="#bkmk-entrodc" data-raw-source="[Enterprise Read-only Domain Controllers](#bkmk-entrodc)">Enterprise Read-only Domain Controllers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="odd">
-<td><p>[Windows Authorization Access Group](#bkmk-winauthaccess)</p></td>
+<td><p><a href="#bkmk-eventlogreaders" data-raw-source="[Event Log Readers](#bkmk-eventlogreaders)">Event Log Readers</a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td><p>[WinRMRemoteWMIUsers_](#bkmk-winrmremotewmiusers-)</p></td>
+<td><p><a href="#bkmk-gpcreatorsowners" data-raw-source="[Group Policy Creator Owners](#bkmk-gpcreatorsowners)">Group Policy Creator Owners</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-guests" data-raw-source="[Guests](#bkmk-guests)">Guests</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-hypervadministrators" data-raw-source="[Hyper-V Administrators](#bkmk-hypervadministrators)">Hyper-V Administrators</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-iis-iusrs" data-raw-source="[IIS_IUSRS](#bkmk-iis-iusrs)">IIS_IUSRS</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-inforesttrustbldrs" data-raw-source="[Incoming Forest Trust Builders](#bkmk-inforesttrustbldrs)">Incoming Forest Trust Builders</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#key-admins" data-raw-source="[Key Admins](#key-admins)">Key Admins</a></p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-networkcfgoperators" data-raw-source="[Network Configuration Operators](#bkmk-networkcfgoperators)">Network Configuration Operators</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-perflogusers" data-raw-source="[Performance Log Users](#bkmk-perflogusers)">Performance Log Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-perfmonitorusers" data-raw-source="[Performance Monitor Users](#bkmk-perfmonitorusers)">Performance Monitor Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-pre-ws2kcompataccess" data-raw-source="[Pre–Windows 2000 Compatible Access](#bkmk-pre-ws2kcompataccess)">Pre–Windows 2000 Compatible Access</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-printoperators" data-raw-source="[Print Operators](#bkmk-printoperators)">Print Operators</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-protectedusers" data-raw-source="[Protected Users](#bkmk-protectedusers)">Protected Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-rasandias" data-raw-source="[RAS and IAS Servers](#bkmk-rasandias)">RAS and IAS Servers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-rdsendpointservers" data-raw-source="[RDS Endpoint Servers](#bkmk-rdsendpointservers)">RDS Endpoint Servers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-rdsmanagementservers" data-raw-source="[RDS Management Servers](#bkmk-rdsmanagementservers)">RDS Management Servers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-rdsremoteaccessservers" data-raw-source="[RDS Remote Access Servers](#bkmk-rdsremoteaccessservers)">RDS Remote Access Servers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-rodc" data-raw-source="[Read-only Domain Controllers](#bkmk-rodc)">Read-only Domain Controllers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-remotedesktopusers" data-raw-source="[Remote Desktop Users](#bkmk-remotedesktopusers)">Remote Desktop Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-remotemanagementusers" data-raw-source="[Remote Management Users](#bkmk-remotemanagementusers)">Remote Management Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-replicator" data-raw-source="[Replicator](#bkmk-replicator)">Replicator</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-schemaadmins" data-raw-source="[Schema Admins](#bkmk-schemaadmins)">Schema Admins</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-serveroperators" data-raw-source="[Server Operators](#bkmk-serveroperators)">Server Operators</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#storage-replica-administrators" data-raw-source="[Storage Replica Administrators](#storage-replica-administrators)">Storage Replica Administrators</a></p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#system-managed-accounts-group" data-raw-source="[System Managed Accounts Group](#system-managed-accounts-group)">System Managed Accounts Group</a></p></td>
+<td><p>Yes</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-terminalserverlic" data-raw-source="[Terminal Server License Servers](#bkmk-terminalserverlic)">Terminal Server License Servers</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-users" data-raw-source="[Users](#bkmk-users)">Users</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p><a href="#bkmk-winauthaccess" data-raw-source="[Windows Authorization Access Group](#bkmk-winauthaccess)">Windows Authorization Access Group</a></p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p><a href="#bkmk-winrmremotewmiusers-" data-raw-source="[WinRMRemoteWMIUsers_](#bkmk-winrmremotewmiusers-)">WinRMRemoteWMIUsers_</a></p></td>
 <td><p></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
@@ -540,7 +548,7 @@ The following tables provide descriptions of the default groups that are located
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-acasstops"></a>Access Control Assistance Operators
 
@@ -568,7 +576,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn Local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -602,7 +610,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-accountoperators"></a>Account Operators
 
@@ -612,10 +620,10 @@ Members of the Account Operators group cannot manage the Administrator user acco
 
 The Account Operators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-By default, this built-in group has no members, and it can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and do not use it for any delegated administration. This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> By default, this built-in group has no members, and it can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and do not use it for any delegated administration. This group cannot be renamed, deleted, or moved.
 
- 
+ 
 
 This security group has not changed since Windows Server 2008.
 
@@ -637,7 +645,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn Local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -665,12 +673,12 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-admins"></a>Administrators
 
@@ -678,12 +686,12 @@ Members of the Administrators group have complete and unrestricted access to the
 
 The Administrators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-The Administrators group has built-in capabilities that give its members full control over the system. This group cannot be renamed, deleted, or moved. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups.
+> [!NOTE]
+> The Administrators group has built-in capabilities that give its members full control over the system. This group cannot be renamed, deleted, or moved. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups.
 
 Membership can be modified by members of the following groups: the default service Administrators, Domain Admins in the domain, or Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a service administrator group because its members have full access to the domain controllers in the domain.
 
- 
+ 
 
 This security group includes the following changes since Windows Server 2008:
 
@@ -709,7 +717,7 @@ This security group includes the following changes since Windows Server 2008:
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn Local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -737,38 +745,38 @@ This security group includes the following changes since Windows Server 2008:
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process): SeIncreaseQuotaPrivilege</p>
-<p>[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight</p>
-<p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight</p>
-<p>[Allow log on through Remote Desktop Services](/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services): SeRemoteInteractiveLogonRight</p>
-<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege</p>
-<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege</p>
-<p>[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time): SeSystemTimePrivilege</p>
-<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege</p>
-<p>[Create a pagefile](/windows/device-security/security-policy-settings/create-a-pagefile): SeCreatePagefilePrivilege</p>
-<p>[Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege</p>
-<p>[Create symbolic links](/windows/device-security/security-policy-settings/create-symbolic-links): SeCreateSymbolicLinkPrivilege</p>
-<p>[Debug programs](/windows/device-security/security-policy-settings/debug-programs): SeDebugPrivilege</p>
-<p>[Enable computer and user accounts to be trusted for delegation](/windows/device-security/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation): SeEnableDelegationPrivilege</p>
-<p>[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system): SeRemoteShutdownPrivilege</p>
-<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege</p>
-<p>[Increase scheduling priority](/windows/device-security/security-policy-settings/increase-scheduling-priority): SeIncreaseBasePriorityPrivilege</p>
-<p>[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers): SeLoadDriverPrivilege</p>
-<p>[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight</p>
-<p>[Manage auditing and security log](/windows/device-security/security-policy-settings/manage-auditing-and-security-log): SeSecurityPrivilege</p>
-<p>[Modify firmware environment values](/windows/device-security/security-policy-settings/modify-firmware-environment-values): SeSystemEnvironmentPrivilege</p>
-<p>[Perform volume maintenance tasks](/windows/device-security/security-policy-settings/perform-volume-maintenance-tasks): SeManageVolumePrivilege</p>
-<p>[Profile system performance](/windows/device-security/security-policy-settings/profile-system-performance): SeSystemProfilePrivilege</p>
-<p>[Profile single process](/windows/device-security/security-policy-settings/profile-single-process): SeProfileSingleProcessPrivilege</p>
-<p>[Remove computer from docking station](/windows/device-security/security-policy-settings/remove-computer-from-docking-station): SeUndockPrivilege</p>
-<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): SeRestorePrivilege</p>
-<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege</p>
-<p>[Take ownership of files or other objects](/windows/device-security/security-policy-settings/take-ownership-of-files-or-other-objects): SeTakeOwnershipPrivilege</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process" data-raw-source="[Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process)">Adjust memory quotas for a process</a>: SeIncreaseQuotaPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/access-this-computer-from-the-network" data-raw-source="[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network)">Access this computer from the network</a>: SeNetworkLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services" data-raw-source="[Allow log on through Remote Desktop Services](/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services)">Allow log on through Remote Desktop Services</a>: SeRemoteInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/back-up-files-and-directories" data-raw-source="[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories)">Back up files and directories</a>: SeBackupPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/bypass-traverse-checking" data-raw-source="[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking)">Bypass traverse checking</a>: SeChangeNotifyPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/change-the-system-time" data-raw-source="[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time)">Change the system time</a>: SeSystemTimePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/change-the-time-zone" data-raw-source="[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone)">Change the time zone</a>: SeTimeZonePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/create-a-pagefile" data-raw-source="[Create a pagefile](/windows/device-security/security-policy-settings/create-a-pagefile)">Create a pagefile</a>: SeCreatePagefilePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/create-global-objects" data-raw-source="[Create global objects](/windows/device-security/security-policy-settings/create-global-objects)">Create global objects</a>: SeCreateGlobalPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/create-symbolic-links" data-raw-source="[Create symbolic links](/windows/device-security/security-policy-settings/create-symbolic-links)">Create symbolic links</a>: SeCreateSymbolicLinkPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/debug-programs" data-raw-source="[Debug programs](/windows/device-security/security-policy-settings/debug-programs)">Debug programs</a>: SeDebugPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation" data-raw-source="[Enable computer and user accounts to be trusted for delegation](/windows/device-security/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation)">Enable computer and user accounts to be trusted for delegation</a>: SeEnableDelegationPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system" data-raw-source="[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system)">Force shutdown from a remote system</a>: SeRemoteShutdownPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication" data-raw-source="[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication)">Impersonate a client after authentication</a>: SeImpersonatePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/increase-scheduling-priority" data-raw-source="[Increase scheduling priority](/windows/device-security/security-policy-settings/increase-scheduling-priority)">Increase scheduling priority</a>: SeIncreaseBasePriorityPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/load-and-unload-device-drivers" data-raw-source="[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers)">Load and unload device drivers</a>: SeLoadDriverPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/log-on-as-a-batch-job" data-raw-source="[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job)">Log on as a batch job</a>: SeBatchLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/manage-auditing-and-security-log" data-raw-source="[Manage auditing and security log](/windows/device-security/security-policy-settings/manage-auditing-and-security-log)">Manage auditing and security log</a>: SeSecurityPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/modify-firmware-environment-values" data-raw-source="[Modify firmware environment values](/windows/device-security/security-policy-settings/modify-firmware-environment-values)">Modify firmware environment values</a>: SeSystemEnvironmentPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/perform-volume-maintenance-tasks" data-raw-source="[Perform volume maintenance tasks](/windows/device-security/security-policy-settings/perform-volume-maintenance-tasks)">Perform volume maintenance tasks</a>: SeManageVolumePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/profile-system-performance" data-raw-source="[Profile system performance](/windows/device-security/security-policy-settings/profile-system-performance)">Profile system performance</a>: SeSystemProfilePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/profile-single-process" data-raw-source="[Profile single process](/windows/device-security/security-policy-settings/profile-single-process)">Profile single process</a>: SeProfileSingleProcessPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/remove-computer-from-docking-station" data-raw-source="[Remove computer from docking station](/windows/device-security/security-policy-settings/remove-computer-from-docking-station)">Remove computer from docking station</a>: SeUndockPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/restore-files-and-directories" data-raw-source="[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories)">Restore files and directories</a>: SeRestorePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/shut-down-the-system" data-raw-source="[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system)">Shut down the system</a>: SeShutdownPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/take-ownership-of-files-or-other-objects" data-raw-source="[Take ownership of files or other objects](/windows/device-security/security-policy-settings/take-ownership-of-files-or-other-objects)">Take ownership of files or other objects</a>: SeTakeOwnershipPrivilege</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-allowedrodcpwdrepl"></a>Allowed RODC Password Replication Group
 
@@ -829,7 +837,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-backupoperators"></a>Backup Operators
 
@@ -857,7 +865,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -885,16 +893,16 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight</p>
-<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege</p>
-<p>[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight</p>
-<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): SeRestorePrivilege</p>
-<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/back-up-files-and-directories" data-raw-source="[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories)">Back up files and directories</a>: SeBackupPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/log-on-as-a-batch-job" data-raw-source="[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job)">Log on as a batch job</a>: SeBatchLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/restore-files-and-directories" data-raw-source="[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories)">Restore files and directories</a>: SeRestorePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/shut-down-the-system" data-raw-source="[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system)">Shut down the system</a>: SeShutdownPrivilege</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-certificateservicedcomaccess"></a>Certificate Service DCOM Access
 
@@ -955,7 +963,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-certpublishers"></a>Cert Publishers
 
@@ -979,7 +987,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-517</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-517</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -995,7 +1003,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1016,7 +1024,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-cloneabledomaincontrollers"></a>Cloneable Domain Controllers
 
@@ -1077,7 +1085,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-cryptographicoperators"></a>Cryptographic Operators
 
@@ -1105,7 +1113,7 @@ This security group was introduced in Windows Vista Service Pack 1, and it h
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -1138,7 +1146,7 @@ This security group was introduced in Windows Vista Service Pack 1, and it h
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-deniedrodcpwdrepl"></a>Denied RODC Password Replication Group
 
@@ -1176,14 +1184,14 @@ This security group includes the following changes since Windows Server 2008:
 </tr>
 <tr class="even">
 <td><p>Default members</p></td>
-<td><p>[Cert Publishers](#bkmk-certpublishers)</p>
-<p>[Domain Admins](#bkmk-domainadmins)</p>
-<p>[Domain Controllers](#bkmk-domaincontrollers)</p>
-<p>[Enterprise Admins](#bkmk-entadmins)</p>
+<td><p><a href="#bkmk-certpublishers" data-raw-source="[Cert Publishers](#bkmk-certpublishers)">Cert Publishers</a></p>
+<p><a href="#bkmk-domainadmins" data-raw-source="[Domain Admins](#bkmk-domainadmins)">Domain Admins</a></p>
+<p><a href="#bkmk-domaincontrollers" data-raw-source="[Domain Controllers](#bkmk-domaincontrollers)">Domain Controllers</a></p>
+<p><a href="#bkmk-entadmins" data-raw-source="[Enterprise Admins](#bkmk-entadmins)">Enterprise Admins</a></p>
 <p>Group Policy Creator Owners</p>
 <p>krbtgt</p>
-<p>[Read-only Domain Controllers](#bkmk-rodc)</p>
-<p>[Schema Admins](#bkmk-schemaadmins)</p></td>
+<p><a href="#bkmk-rodc" data-raw-source="[Read-only Domain Controllers](#bkmk-rodc)">Read-only Domain Controllers</a></p>
+<p><a href="#bkmk-schemaadmins" data-raw-source="[Schema Admins](#bkmk-schemaadmins)">Schema Admins</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
@@ -1208,7 +1216,69 @@ This security group includes the following changes since Windows Server 2008:
 </tbody>
 </table>
 
- 
+### <a href="" id="bkmk-device-owners"></a>Device Owners
+This group is not currently used in Windows. 
+
+Microsoft does not recommend changing the default configuration where this security group has zero members. Changing the default configuration could hinder future scenarios that rely on this group.
+
+The Device Owners group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Well-Known SID/RID</p></td>
+<td><p>S-1-5-32-583</p></td>
+</tr>
+<tr class="even">
+<td><p>Type</p></td>
+<td><p>Builtin Local</p></td>
+</tr>
+<tr class="odd">
+<td><p>Default container</p></td>
+<td><p>CN=BuiltIn, DC=&lt;domain&gt;, DC=</p></td>
+</tr>
+<tr class="even">
+<td><p>Default members</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="odd">
+<td><p>Default member of</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="even">
+<td><p>Protected by ADMINSDHOLDER?</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="odd">
+<td><p>Safe to move out of default container?</p></td>
+<td><p>Can be moved out but it is not recommended</p></td>
+</tr>
+<tr class="even">
+<td><p>Safe to delegate management of this group to non-Service admins?</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="odd">
+<td><p>Default User Rights</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/access-this-computer-from-the-network" data-raw-source="[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network)">Access this computer from the network</a>: SeNetworkLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/bypass-traverse-checking" data-raw-source="[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking)">Bypass traverse checking</a>: SeChangeNotifyPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/change-the-time-zone" data-raw-source="[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone)">Change the time zone</a>: SeTimeZonePrivilege</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+ 
 
 ### <a href="" id="bkmk-distributedcomusers"></a>Distributed COM Users
 
@@ -1269,13 +1339,13 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-dnsupdateproxy"></a>DnsUpdateProxy
 
 Members of the DnsUpdateProxy group are DNS clients. They are permitted to perform dynamic updates on behalf of other clients (such as DHCP servers). A DNS server can develop stale resource records when a DHCP server is configured to dynamically register host (A) and pointer (PTR) resource records on behalf of DHCP clients by using dynamic update. Adding clients to this security group mitigates this scenario.
 
-However, to protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account and configure DHCP servers to perform DNS dynamic updates by using the credentials of this account (user name, password, and domain). Multiple DHCP servers can use the credentials of one dedicated user account.
+However, to protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account and configure DHCP servers to perform DNS dynamic updates by using the credentials of this account (user name, password, and domain). Multiple DHCP servers can use the credentials of one dedicated user account. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
 
 For information, see [DNS Record Ownership and the DnsUpdateProxy Group](https://technet.microsoft.com/library/dd334715.aspx).
 
@@ -1295,7 +1365,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-21-&lt;domain&gt;-1103</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-&lt;variable RID&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -1332,11 +1402,11 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-dnsadmins"></a>DnsAdmins
 
-Members of DNSAdmins group have access to network DNS information. The default permissions are as follows: Allow: Read, Write, Create All Child objects, Delete Child objects, Special Permissions.
+Members of DNSAdmins group have access to network DNS information. The default permissions are as follows: Allow: Read, Write, Create All Child objects, Delete Child objects, Special Permissions. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
 
 For more information about security and DNS, see [DNSSEC in Windows Server 2012](https://technet.microsoft.com/library/dn593694(v=ws.11).aspx).
 
@@ -1356,11 +1426,11 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-21-&lt;domain&gt;-1102</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-&lt;variable RID&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Domain local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -1393,7 +1463,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-domainadmins"></a>Domain Admins
 
@@ -1423,7 +1493,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Domain Global</p></td>
+<td><p>Global</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -1435,8 +1505,8 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Administrators](#bkmk-admins)</p>
-<p>[Denied RODC Password ReplicationGroup](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-admins" data-raw-source="[Administrators](#bkmk-admins)">Administrators</a></p>
+<p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password ReplicationGroup](#bkmk-deniedrodcpwdrepl)">Denied RODC Password ReplicationGroup</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1452,13 +1522,13 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Administrators](#bkmk-admins)</p>
-<p>See [Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p>See <a href="#bkmk-admins" data-raw-source="[Administrators](#bkmk-admins)">Administrators</a></p>
+<p>See <a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-domaincomputers"></a>Domain Computers
 
@@ -1482,7 +1552,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-515</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-515</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -1519,7 +1589,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-domaincontrollers"></a>Domain Controllers
 
@@ -1543,7 +1613,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-516</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-516</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -1559,7 +1629,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1580,7 +1650,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-domainguests"></a>Domain Guests
 
@@ -1604,7 +1674,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-514</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-514</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -1620,7 +1690,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Guests](#bkmk-guests)</p></td>
+<td><p><a href="#bkmk-guests" data-raw-source="[Guests](#bkmk-guests)">Guests</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1636,12 +1706,12 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Guests](#bkmk-guests)</p></td>
+<td><p>See <a href="#bkmk-guests" data-raw-source="[Guests](#bkmk-guests)">Guests</a></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-domainusers"></a>Domain Users
 
@@ -1667,11 +1737,11 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-513</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-513</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Domain Global</p></td>
+<td><p>Global</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -1684,7 +1754,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Users](#bkmk-users)</p></td>
+<td><p><a href="#bkmk-users" data-raw-source="[Users](#bkmk-users)">Users</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1700,12 +1770,12 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Users](#bkmk-users)</p></td>
+<td><p>See <a href="#bkmk-users" data-raw-source="[Users](#bkmk-users)">Users</a></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-entadmins"></a>Enterprise Admins
 
@@ -1747,8 +1817,8 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Administrators](#bkmk-admins)</p>
-<p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-admins" data-raw-source="[Administrators](#bkmk-admins)">Administrators</a></p>
+<p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1764,8 +1834,8 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Administrators](#bkmk-admins)</p>
-<p>See [Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p>See <a href="#bkmk-admins" data-raw-source="[Administrators](#bkmk-admins)">Administrators</a></p>
+<p>See <a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1788,7 +1858,7 @@ The Enterprise Key Admins group was introduced in Windows Server 2016.
 | Safe to delegate management of this group to non-Service admins? | No |
 | Default User Rights | None |
 
- 
+ 
 ### <a href="" id="bkmk-entrodc"></a>Enterprise Read-Only Domain Controllers
 
 Members of this group are Read-Only Domain Controllers in the enterprise. Except for account passwords, a Read-only domain controller holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes cannot be made to the database that is stored on the Read-only domain controller. Changes must be made on a writable domain controller and then replicated to the Read-only domain controller.
@@ -1852,7 +1922,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-eventlogreaders"></a>Event Log Readers
 
@@ -1880,7 +1950,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Domain Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -1913,15 +1983,15 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
-### <a href="" id="bkmk-gpcreatorsowners"></a>Group Policy Creators Owners
+### <a href="" id="bkmk-gpcreatorsowners"></a>Group Policy Creator Owners
 
 This group is authorized to create, edit, or delete Group Policy Objects in the domain. By default, the only member of the group is Administrator.
 
 For information about other features you can use with this security group, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx).
 
-The Group Policy Creators Owners group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
+The Group Policy Creator Owners group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
 This security group has not changed since Windows Server 2008.
 
@@ -1939,7 +2009,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;domain&gt;-520</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-520</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -1955,7 +2025,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -1971,12 +2041,12 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p>See <a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-guests"></a>Guests
 
@@ -1986,12 +2056,12 @@ When a member of the Guests group signs out, the entire profile is deleted. This
 
 Computer Configuration\\Administrative Templates\\System\\User Profiles
 
-**Note**  
-A Guest account is a default member of the Guests security group. People who do not have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account.
+> [!NOTE]
+> A Guest account is a default member of the Guests security group. People who do not have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account.
 
 The Guest account does not require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and the Domain Guests global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
 
- 
+ 
 
 The Guests group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
@@ -2023,12 +2093,11 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Default members</p></td>
-<td><p>Guest</p></td>
+<td><p><a href="#bkmk-domainguests" data-raw-source="[Domain Guests](#bkmk-domainguests)">Domain Guests</a></p><p>Guest</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Domain Guests](#bkmk-domainguests)</p>
-<p>Guest</p></td>
+<td><p>None</p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -2049,16 +2118,16 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-hypervadministrators"></a>Hyper-V Administrators
 
 Members of the Hyper-V Administrators group have complete and unrestricted access to all the features in Hyper-V. Adding members to this group helps reduce the number of members required in the Administrators group, and further separates access.
 
-**Note**  
-Prior to Windows Server 2012, access to features in Hyper-V was controlled in part by membership in the Administrators group.
+> [!NOTE]
+> Prior to Windows Server 2012, access to features in Hyper-V was controlled in part by membership in the Administrators group.
 
- 
+ 
 
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
@@ -2080,7 +2149,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2092,7 +2161,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>No</p></td>
+<td><p>None</p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -2113,13 +2182,13 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-iis-iusrs"></a>IIS\_IUSRS
 
 IIS\_IUSRS is a built-in group that is used by Internet Information Services beginning with IIS 7.0. A built-in account and group are guaranteed by the operating system to always have a unique SID. IIS 7.0 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that are used by the new account and group will never be localized. For example, regardless of the language of the Windows operating system that you install, the IIS account name will always be IUSR, and the group name will be IIS\_IUSRS.
 
-For more information, see [Understanding Built-In User and Group Accounts in IIS 7](http://www.iis.net/learn/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
+For more information, see [Understanding Built-In User and Group Accounts in IIS 7](https://docs.microsoft.com/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
 This security group has not changed since Windows Server 2008.
 
@@ -2141,7 +2210,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn Local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2174,7 +2243,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-inforesttrustbldrs"></a>Incoming Forest Trust Builders
 
@@ -2182,19 +2251,19 @@ Members of the Incoming Forest Trust Builders group can create incoming, one-way
 
 To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other Active Directory domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including security identifiers (SIDs) for users and groups.
 
-**Note**  
-This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
+> [!NOTE]
+> This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
 
- 
+ 
 
 For more information, see [How Domain and Forest Trusts Work: Domain and Forest Trusts](https://technet.microsoft.com/library/f5c70774-25cd-4481-8b7a-3d65c86e69b1).
 
 The Incoming Forest Trust Builders group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This group cannot be renamed, deleted, or moved.
 
- 
+ 
 
 This security group has not changed since Windows Server 2008.
 
@@ -2216,7 +2285,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2289,17 +2358,15 @@ Members of the Network Configuration Operators group can have the following admi
 
 -   Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card.
 
-**Note**  
-This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
+> [!NOTE]
+> This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
 
- 
-
+ 
 The Network Configuration Operators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This group cannot be renamed, deleted, or moved.
 
- 
 
 This security group has not changed since Windows Server 2008.
 
@@ -2321,7 +2388,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>BuiltIn local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2354,7 +2421,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-perflogusers"></a>Performance Log Users
 
@@ -2364,26 +2431,23 @@ Members of the Performance Log Users group can manage performance counters, logs
 
 -   Can create and modify Data Collector Sets after the group is assigned the [Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job) user right.
 
-    **Warning**  
-    If you are a member of the Performance Log Users group, you must configure Data Collector Sets that you create to run under your credentials.
+    > [!WARNING]
+    > If you are a member of the Performance Log Users group, you must configure Data Collector Sets that you create to run under your credentials.
 
-     
 
 -   Cannot use the Windows Kernel Trace event provider in Data Collector Sets.
 
 For members of the Performance Log Users group to initiate data logging or modify Data Collector Sets, the group must first be assigned the [Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job) user right. To assign this user right, use the Local Security Policy snap-in in Microsoft Management Console.
 
-**Note**  
-This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
+> [!NOTE]
+> This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
 
- 
-
+ 
 The Performance Log Users group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-This account cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This account cannot be renamed, deleted, or moved.
 
- 
 
 This security group has not changed since Windows Server 2008.
 
@@ -2405,7 +2469,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2433,12 +2497,12 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job): SeBatchLogonRight</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/log-on-as-a-batch-job" data-raw-source="[Log on as a batch job](/windows/device-security/security-policy-settings/log-on-as-a-batch-job)">Log on as a batch job</a>: SeBatchLogonRight</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-perfmonitorusers"></a>Performance Monitor Users
 
@@ -2454,15 +2518,15 @@ Specifically, members of this security group:
 
 -   Cannot create or modify Data Collector Sets.
 
-    **Warning**  
-    You cannot configure a Data Collector Set to run as a member of the Performance Monitor Users group.
+    > [!WARNING]
+    > You cannot configure a Data Collector Set to run as a member of the Performance Monitor Users group.
 
-     
+     
 
-**Note**  
-This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO). This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO). This group cannot be renamed, deleted, or moved.
 
- 
+ 
 
 The Performance Monitor Users group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
@@ -2486,7 +2550,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2519,16 +2583,14 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
-
+ 
 ### <a href="" id="bkmk-pre-ws2kcompataccess"></a>Pre–Windows 2000 Compatible Access
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers running Windows NT 4.0 and earlier. By default, the special identity group, Everyone, is a member of this group. Add users to this group only if they are running Windows NT 4.0 or earlier.
 
-**Warning**  
-This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
+> [!WARNING]
+> This group appears as a SID until the domain controller is made the primary domain controller and it holds the operations master role (also known as flexible single master operations or FSMO).
 
- 
 
 The Pre–Windows 2000 Compatible Access group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
@@ -2552,7 +2614,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2580,13 +2642,13 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight</p>
-<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/access-this-computer-from-the-network" data-raw-source="[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network)">Access this computer from the network</a>: SeNetworkLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/bypass-traverse-checking" data-raw-source="[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking)">Bypass traverse checking</a>: SeChangeNotifyPrivilege</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-printoperators"></a>Print Operators
 
@@ -2616,7 +2678,7 @@ This security group has not changed since Windows Server 2008. However, in Windo
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2644,14 +2706,14 @@ This security group has not changed since Windows Server 2008. However, in Windo
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight</p>
-<p>[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers): SeLoadDriverPrivilege</p>
-<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/load-and-unload-device-drivers" data-raw-source="[Load and unload device drivers](/windows/device-security/security-policy-settings/load-and-unload-device-drivers)">Load and unload device drivers</a>: SeLoadDriverPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/shut-down-the-system" data-raw-source="[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system)">Shut down the system</a>: SeShutdownPrivilege</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-protectedusers"></a>Protected Users
 
@@ -2695,7 +2757,7 @@ The following table specifies the properties of the Protected Users group.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Domain Global</p></td>
+<td><p>Global</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2728,7 +2790,7 @@ The following table specifies the properties of the Protected Users group.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-rasandias"></a>RAS and IAS Servers
 
@@ -2756,7 +2818,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Domain local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2789,7 +2851,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-rdsendpointservers"></a>RDS Endpoint Servers
 
@@ -2813,11 +2875,11 @@ This security group was introduced in Windows Server 2012, and it has not chang
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-21-&lt;domain&gt;-553</p></td>
+<td><p>S-1-5-32-576</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2850,7 +2912,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-rdsmanagementservers"></a>RDS Management Servers
 
@@ -2876,7 +2938,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2909,7 +2971,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-rdsremoteaccessservers"></a>RDS Remote Access Servers
 
@@ -2937,7 +2999,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -2970,7 +3032,79 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
+
+### <a href="" id="bkmk-rodc"></a>Read-Only Domain Controllers
+
+This group is comprised of the Read-only domain controllers in the domain. A Read-only domain controller makes it possible for organizations to easily deploy a domain controller in scenarios where physical security cannot be guaranteed, such as branch office locations, or in scenarios where local storage of all domain passwords is considered a primary threat, such as in an extranet or in an application-facing role.
+
+Because administration of a Read-only domain controller can be delegated to a domain user or security group, an Read-only domain controller is well suited for a site that should not have a user who is a member of the Domain Admins group. A Read-only domain controller encompasses the following functionality:
+
+-   Read-only AD DS database
+
+-   Unidirectional replication
+
+-   Credential caching
+
+-   Administrator role separation
+
+-   Read-only Domain Name System (DNS)
+
+For information about deploying a Read-only domain controller, see [Understanding Planning and Deployment for Read-Only Domain Controllers](https://technet.microsoft.com/library/cc754719(v=ws.10).aspx).
+
+This security group was introduced in Windows Server 2008, and it has not changed in subsequent versions.
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Well-Known SID/RID</p></td>
+<td><p>S-1-5-21-&lt;domain&gt;-521</p></td>
+</tr>
+<tr class="even">
+<td><p>Type</p></td>
+<td><p>Global</p></td>
+</tr>
+<tr class="odd">
+<td><p>Default container</p></td>
+<td><p>CN=Users, DC=&lt;domain&gt;, DC=</p></td>
+</tr>
+<tr class="even">
+<td><p>Default members</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="odd">
+<td><p>Default member of</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
+</tr>
+<tr class="even">
+<td><p>Protected by ADMINSDHOLDER?</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="odd">
+<td><p>Safe to move out of default container?</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="even">
+<td><p>Safe to delegate management of this group to non-Service admins?</p></td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td><p>Default User Rights</p></td>
+<td><p>See <a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
+</tr>
+</tbody>
+</table>
+ 
 
 ### <a href="" id="bkmk-remotedesktopusers"></a>Remote Desktop Users
 
@@ -3031,80 +3165,8 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
 
-### <a href="" id="bkmk-rodc"></a>Read-Only Domain Controllers
-
-This group is comprised of the Read-only domain controllers in the domain. A Read-only domain controller makes it possible for organizations to easily deploy a domain controller in scenarios where physical security cannot be guaranteed, such as branch office locations, or in scenarios where local storage of all domain passwords is considered a primary threat, such as in an extranet or in an application-facing role.
-
-Because administration of a Read-only domain controller can be delegated to a domain user or security group, an Read-only domain controller is well suited for a site that should not have a user who is a member of the Domain Admins group. A Read-only domain controller encompasses the following functionality:
-
--   Read-only AD DS database
-
--   Unidirectional replication
-
--   Credential caching
-
--   Administrator role separation
-
--   Read-only Domain Name System (DNS)
-
-For information about deploying a Read-only domain controller, see [Understanding Planning and Deployment for Read-Only Domain Controllers](https://technet.microsoft.com/library/cc754719(v=ws.10).aspx).
-
-This security group was introduced in Windows Server 2008, and it has not changed in subsequent versions.
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribute</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-21-&lt;domain&gt;-521</p></td>
-</tr>
-<tr class="even">
-<td><p>Type</p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>Default container</p></td>
-<td><p>CN=Users, DC=&lt;domain&gt;, DC=</p></td>
-</tr>
-<tr class="even">
-<td><p>Default members</p></td>
-<td><p>None</p></td>
-</tr>
-<tr class="odd">
-<td><p>Default member of</p></td>
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
-</tr>
-<tr class="even">
-<td><p>Protected by ADMINSDHOLDER?</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="odd">
-<td><p>Safe to move out of default container?</p></td>
-<td><p>Yes</p></td>
-</tr>
-<tr class="even">
-<td><p>Safe to delegate management of this group to non-Service admins?</p></td>
-<td><p></p></td>
-</tr>
-<tr class="odd">
-<td><p>Default User Rights</p></td>
-<td><p>See [Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
-</tr>
-</tbody>
-</table>
-
- 
+ 
 
 ### <a href="" id="bkmk-remotemanagementusers"></a>Remote Management Users
 
@@ -3134,7 +3196,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3167,14 +3229,14 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-replicator"></a>Replicator
 
 Computers that are members of the Replicator group support file replication in a domain. Windows Server operating systems use the File Replication service (FRS) to replicate system policies and logon scripts stored in the System Volume (SYSVOL). Each domain controller keeps a copy of SYSVOL for network clients to access. FRS can also replicate data for the Distributed File System (DFS), synchronizing the content of each member in a replica set as defined by DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synchronized immediately within sites and by a schedule between sites.
 
-**Important**  
-In Windows Server 2008 R2, FRS cannot be used for replicating DFS folders or custom (non-SYSVOL) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of a SYSVOL shared resource in a domain that uses FRS for replicating the SYSVOL shared resource between domain controllers.
+> [!WARNING]
+> In Windows Server 2008 R2, FRS cannot be used for replicating DFS folders or custom (non-SYSVOL) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of a SYSVOL shared resource in a domain that uses FRS for replicating the SYSVOL shared resource between domain controllers.
 
 However, Windows Server 2008 R2 servers cannot use FRS to replicate the contents of any replica set apart from the SYSVOL shared resource. The DFS Replication service is a replacement for FRS, and it can be used to replicate the contents of a SYSVOL shared resource, DFS folders, and other custom (non-SYSVOL) data. You should migrate all non-SYSVOL FRS replica sets to DFS Replication. For more information, see:
 
@@ -3201,7 +3263,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3234,7 +3296,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-schemaadmins"></a>Schema Admins
 
@@ -3264,7 +3326,7 @@ This security group has not changed since Windows Server 2008.
 <tbody>
 <tr class="odd">
 <td><p>Well-Known SID/RID</p></td>
-<td><p>S-1-5-&lt;root domain&gt;-518</p></td>
+<td><p>S-1-5-21-&lt;root domain&gt;-518</p></td>
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
@@ -3280,7 +3342,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p><a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -3296,18 +3358,18 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>See [Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)</p></td>
+<td><p>See <a href="#bkmk-deniedrodcpwdrepl" data-raw-source="[Denied RODC Password Replication Group](#bkmk-deniedrodcpwdrepl)">Denied RODC Password Replication Group</a></p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-serveroperators"></a>Server Operators
 
-Members in the Server Operators group can administer domain servers. This group exists only on domain controllers. By default, the group has no members. Memebers of the Server Operators group can sign in to a server interactively, create and delete network shared resources, start and stop services, back up and restore files, format the hard disk drive of the computer, and shut down the computer. This group cannot be renamed, deleted, or moved.
+Members in the Server Operators group can administer domain controllers. This group exists only on domain controllers. By default, the group has no members. Members of the Server Operators group can sign in to a server interactively, create and delete network shared resources, start and stop services, back up and restore files, format the hard disk drive of the computer, and shut down the computer. This group cannot be renamed, deleted, or moved.
 
-By default, this built-in group has no members, and it has access to server configuration options on domain controllers. Its membership is controlled by the service administrator groups, Administrators and Domain Admins, in the domain, and the Enterprise Admins group. Members in this group cannot change any administrative group memberships. This is considered a service administrator account because its members have physical access to domain controllers, they can perform maintenance tasks (such as backup and restore), and they have the ability to change binaries that are installed on the domain controllers. Note the default user rights in the following table.
+By default, this built-in group has no members, and it has access to server configuration options on domain controllers. Its membership is controlled by the service administrator groups Administrators and Domain Admins in the domain, and the Enterprise Admins group in the forest root domain. Members in this group cannot change any administrative group memberships. This is considered a service administrator account because its members have physical access to domain controllers, they can perform maintenance tasks (such as backup and restore), and they have the ability to change binaries that are installed on the domain controllers. Note the default user rights in the following table.
 
 The Server Operators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
@@ -3331,7 +3393,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3359,13 +3421,13 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="odd">
 <td><p>Default User Rights</p></td>
-<td><p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight</p>
-<p>[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories): SeBackupPrivilege</p>
-<p>[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time): SeSystemTimePrivilege</p>
-<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege</p>
-<p>[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system): SeRemoteShutdownPrivilege</p>
-<p>[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories): Restore files and directories SeRestorePrivilege</p>
-<p>[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system): SeShutdownPrivilege</p></td>
+<td><p><a href="/windows/device-security/security-policy-settings/allow-log-on-locally" data-raw-source="[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally)">Allow log on locally</a>: SeInteractiveLogonRight</p>
+<p><a href="/windows/device-security/security-policy-settings/back-up-files-and-directories" data-raw-source="[Back up files and directories](/windows/device-security/security-policy-settings/back-up-files-and-directories)">Back up files and directories</a>: SeBackupPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/change-the-system-time" data-raw-source="[Change the system time](/windows/device-security/security-policy-settings/change-the-system-time)">Change the system time</a>: SeSystemTimePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/change-the-time-zone" data-raw-source="[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone)">Change the time zone</a>: SeTimeZonePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system" data-raw-source="[Force shutdown from a remote system](/windows/device-security/security-policy-settings/force-shutdown-from-a-remote-system)">Force shutdown from a remote system</a>: SeRemoteShutdownPrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/restore-files-and-directories" data-raw-source="[Restore files and directories](/windows/device-security/security-policy-settings/restore-files-and-directories)">Restore files and directories</a>: Restore files and directories SeRestorePrivilege</p>
+<p><a href="/windows/device-security/security-policy-settings/shut-down-the-system" data-raw-source="[Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system)">Shut down the system</a>: SeShutdownPrivilege</p></td>
 </tr>
 </tbody>
 </table>
@@ -3379,7 +3441,7 @@ The Storage Replica Administrators group applies to versions of the Windows Serv
 | Attribute | Value |
 |-----------|-------|
 | Well-Known SID/RID | S-1-5-32-582 |
-| Type | BuiltIn Local |
+| Type | Builtin Local |
 | Default container | CN=BuiltIn, DC=&lt;domain&gt;, DC= |
 | Default members | None |
 | Default member of | None |
@@ -3400,7 +3462,7 @@ The System Managed Accounts group applies to versions of the Windows Server oper
 | Attribute | Value |
 |-----------|-------|
 | Well-Known SID/RID | S-1-5-32-581 |
-| Type | BuiltIn Local |
+| Type | Builtin Local |
 | Default container | CN=BuiltIn, DC=&lt;domain&gt;, DC= |
 | Default members | Users |
 | Default member of | None |
@@ -3419,10 +3481,10 @@ For more information about this security group, see [Terminal Services License S
 
 The Terminal Server License Servers group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This group cannot be renamed, deleted, or moved.
 
- 
+ 
 
 This security group only applies to Windows Server 2003 and Windows Server 2008 because Terminal Services was replaced by Remote Desktop Services in Windows Server 2008 R2.
 
@@ -3444,7 +3506,7 @@ This security group only applies to Windows Server 2003 and Windows Server 200
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3477,7 +3539,7 @@ This security group only applies to Windows Server 2003 and Windows Server 200
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-users"></a>Users
 
@@ -3511,7 +3573,7 @@ This security group includes the following changes since Windows Server 2008:
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3520,12 +3582,12 @@ This security group includes the following changes since Windows Server 2008:
 <tr class="even">
 <td><p>Default members</p></td>
 <td><p>Authenticated Users</p>
-<p>[Domain Users](#bkmk-domainusers)</p>
+<p><a href="#bkmk-domainusers" data-raw-source="[Domain Users](#bkmk-domainusers)">Domain Users</a></p>
 <p>INTERACTIVE</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default member of</p></td>
-<td><p>Domain Users (this membership is due to the fact that the Primary Group ID of all user accounts is Domain Users.)</p></td>
+<td><p>None</p></td>
 </tr>
 <tr class="even">
 <td><p>Protected by ADMINSDHOLDER?</p></td>
@@ -3546,7 +3608,7 @@ This security group includes the following changes since Windows Server 2008:
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-winauthaccess"></a>Windows Authorization Access Group
 
@@ -3554,11 +3616,10 @@ Members of this group have access to the computed token GroupsGlobalAndUniversal
 
 The Windows Authorization Access group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups table](#bkmk-groupstable).
 
-**Note**  
-This group cannot be renamed, deleted, or moved.
+> [!NOTE]
+> This group cannot be renamed, deleted, or moved.
 
- 
-
+ 
 This security group has not changed since Windows Server 2008.
 
 <table>
@@ -3579,7 +3640,7 @@ This security group has not changed since Windows Server 2008.
 </tr>
 <tr class="even">
 <td><p>Type</p></td>
-<td><p>Builtin local</p></td>
+<td><p>Builtin Local</p></td>
 </tr>
 <tr class="odd">
 <td><p>Default container</p></td>
@@ -3612,7 +3673,7 @@ This security group has not changed since Windows Server 2008.
 </tbody>
 </table>
 
- 
+ 
 
 ### <a href="" id="bkmk-winrmremotewmiusers-"></a>WinRMRemoteWMIUsers\_
 
@@ -3634,10 +3695,10 @@ The WinRMRemoteWMIUsers\_ group applies to versions of the Windows Server operat
 
 In Windows Server 2012, the Access Denied Assistance functionality adds the Authenticated Users group to the local WinRMRemoteWMIUsers\_\_ group. Therefore, when the Access Denied Assistance functionality is enabled, all authenticated users who have Read permissions to the file share can view the file share permissions.
 
-**Note**  
-The WinRMRemoteWMIUsers\_ group allows running Windows PowerShell commands remotely whereas the [Remote Management Users](#bkmk-remotemanagementusers) group is generally used to allow users to manage servers by using the Server Manager console.
+> [!NOTE]
+> The WinRMRemoteWMIUsers\_ group allows running Windows PowerShell commands remotely whereas the [Remote Management Users](#bkmk-remotemanagementusers) group is generally used to allow users to manage servers by using the Server Manager console.
 
- 
+ 
 
 This security group was introduced in Windows Server 2012, and it has not changed in subsequent versions.
 
@@ -3691,6 +3752,7 @@ This security group was introduced in Windows Server 2012, and it has not chang
 </tr>
 </tbody>
 </table>
+
 
 ## See also
 

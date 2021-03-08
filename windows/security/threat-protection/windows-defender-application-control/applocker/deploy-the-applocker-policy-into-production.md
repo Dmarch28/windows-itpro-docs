@@ -2,24 +2,27 @@
 title: Deploy the AppLocker policy into production (Windows 10)
 description: This topic for the IT professional describes the tasks that should be completed before you deploy AppLocker application control settings.
 ms.assetid: ebbb1907-92dc-499e-8cee-8e637483c9ae
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Deploy the AppLocker policy into production
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for the IT professional describes the tasks that should be completed before you deploy AppLocker application control settings.
 

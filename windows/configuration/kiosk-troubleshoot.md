@@ -1,15 +1,17 @@
 ---
 title: Troubleshoot kiosk mode issues (Windows 10)
-description: Tips for troubleshooting multi-app kiosk configuration.
+description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
 ms.assetid: 14DDDC96-88C7-4181-8415-B371F25726C8
+ms.reviewer: 
+manager: dansimp
 keywords: ["lockdown", "app restrictions"]
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: edu, security
-author: jdeckerms
+author: dansimp
 ms.localizationpriority: medium
-ms.author: jdecker
+ms.author: dansimp
 ms.topic: article
 ---
 

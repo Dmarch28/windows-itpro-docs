@@ -1,18 +1,21 @@
 ---
 title: Planning Your Windows Defender Firewall with Advanced Security Design (Windows 10)
-description: Planning Your Windows Defender Firewall with Advanced Security Design
+description: After you gather the relevant information, select the design or combination of designs for Windows Defender Firewall with Advanced Security in your environment.
 ms.assetid: f3ac3d49-ef4c-4f3c-a16c-e107284e169f
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 08/17/2017
+ms.technology: mde
 ---
 
 # Planning Your Windows Defender Firewall with Advanced Security Design
@@ -35,9 +38,9 @@ To create a domain isolation or server isolation design, you must understand the
 
 ## IPsec performance considerations
 
-Although IPsec is critically important in securing network traffic going to and from your devices, there are costs associated with its use. The mathematically intensive cryptographic algorithms require a significant amount of computing power, which can prevent your device from making use of all of the available bandwidth. For example, an IPsec-enabled device using the AES encryption protocols on a 10 gigabits per second (Gbps) network link might see a throughput of 4.5 Gbps. This is due to the demands placed on the CPU to perform the cryptographic functions required by the IPsec integrity and encryption algorithms.
+Although IPsec is critically important in securing network traffic going to and from your devices, there are costs associated with its use. The mathematically intensive cryptographic algorithms require a significant amount of computing power, which can prevent your device from making use of all of the available bandwidth. For example, an IPsec-enabled device using the AES encryption protocols on a 10 gigabits per second (Gbps) network link might see a throughput of 4.5 Gbps. This reduction is due to the demands placed on the CPU to perform the cryptographic functions required by the IPsec integrity and encryption algorithms.
 
-IPsec task offload is a Windows technology that supports network adapters equipped with dedicated cryptographic processors to perform the computationally intensive work required by IPsec. This frees up a device’s CPU and can dramatically increase network throughput. For the same network link as above, the throughput with IPsec task offload enabled improves to about 9.2 Gbps.
+IPsec task offload is a Windows technology that supports network adapters equipped with dedicated cryptographic processors to perform the computationally intensive work required by IPsec. This configuration frees up a device’s CPU and can dramatically increase network throughput. For the same network link as above, the throughput with IPsec task offload enabled improves to about 9.2 Gbps.
 
 ## Domain isolation design
 
@@ -93,4 +96,4 @@ After you have selected a design and assigned your devices to zones, you can beg
 
 When you are ready to examine the options for the groups, filters, and GPOs, see the [Planning Group Policy Deployment for Your Isolation Zones](planning-group-policy-deployment-for-your-isolation-zones.md) section.
 
-**Next: **[Planning Settings for a Basic Firewall Policy](planning-settings-for-a-basic-firewall-policy.md)
+**Next:** [Planning Settings for a Basic Firewall Policy](planning-settings-for-a-basic-firewall-policy.md)

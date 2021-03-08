@@ -1,18 +1,21 @@
 ---
 title: Server Isolation GPOs (Windows 10)
-description: Server Isolation GPOs
+description: Learn about required GPOs for isolation zones and how many server isolation zones you need in Windows Defender Firewall with Advanced Security.
 ms.assetid: c97b1f2f-51d8-4596-b38a-8a3f6f706be4
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Server Isolation GPOs
@@ -34,4 +37,4 @@ This GPO is identical to the GPO\_DOMISO\_Encryption GPO with the following chan
 
     >**Important:**  Earlier versions of Windows support only device-based authentication. If you specify that user authentication is mandatory, only users on devices that are running at least Windows Vista or Windows Server 2008 can connect.
 
-**Next: **[Planning GPO Deployment](planning-gpo-deployment.md)
+**Next:** [Planning GPO Deployment](planning-gpo-deployment.md)

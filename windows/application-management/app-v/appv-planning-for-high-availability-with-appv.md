@@ -1,12 +1,15 @@
 ---
 title: Planning for High Availability with App-V Server
-description: Planning for High Availability with App-V Server
-author: MaggiePucciEvans
+description: Learn what you need to know so you can plan for high availability with Application Virtualization (App-V) server.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # Planning for high availability with App-V Server
@@ -15,7 +18,7 @@ ms.topic: article
 
 Microsoft Application Virtualization (App-V) system configurations can take advantage of options that maintain a high available service level.
 
-The following sections will he following sections to help you understand the options to deploy App-V in a highly available configuration.
+The following sections will help you understand the options to deploy App-V in a highly available configuration.
 
 ## Support for Microsoft SQL Server clustering
 
@@ -84,8 +87,8 @@ Use the following steps to modify the connection string to include ```failover p
 2. Navigate to **HKEY\_LOCAL\_MACHINE** \\ **Software** \\ **Microsoft** \\ **AppV** \\ **Server** \\ **ManagementService**.
 3. Modify the **MANAGEMENT\_SQL\_CONNECTION\_STRING** value with the ```failover partner = <server2>``` value.
 4. Restart management service using the IIS console.
- >[!NOTE]
- >Database Mirroring is on the list of [deprecated database engine features in SQL Server 2012](<https://msdn.microsoft.com/library/ms143729(v=sql.110).aspx>) due to the **AlwaysOn** feature available starting with Microsoft SQL Server 2012.
+  > [!NOTE]
+   >Database Mirroring is on the list of [deprecated database engine features in SQL Server 2012](<https://msdn.microsoft.com/library/ms143729(v=sql.110).aspx>) due to the **AlwaysOn** feature available starting with Microsoft SQL Server 2012.
 
 Click any of the following links for more information:
 
@@ -97,9 +100,9 @@ Click any of the following links for more information:
 
 The App-V management server database supports deployments to computers running Microsoft SQL Server with the **Always On** configuration. For more information, see [Always On Availability Groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

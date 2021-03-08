@@ -2,24 +2,27 @@
 title: Enforce AppLocker rules (Windows 10)
 description: This topic for IT professionals describes how to enforce application control rules by using AppLocker.
 ms.assetid: e1528b7b-77f2-4419-8e27-c9cc3721d96d
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Enforce AppLocker rules
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for IT professionals describes how to enforce application control rules by using AppLocker.
 

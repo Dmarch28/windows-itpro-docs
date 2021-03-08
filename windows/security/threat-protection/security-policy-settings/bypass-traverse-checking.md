@@ -2,17 +2,20 @@
 title: Bypass traverse checking (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Bypass traverse checking security policy setting.
 ms.assetid: 1c828655-68d3-4140-aa0f-caa903a7087e
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Bypass traverse checking
@@ -20,7 +23,7 @@ ms.date: 04/19/2017
 **Applies to**
 -   Windows 10
 
->Learn more about what features and functionality are supported in each Windows edition at [Compare Windows 10 Editions](https://www.microsoft.com/en-us/WindowsForBusiness/Compare).
+>Learn more about what features and functionality are supported in each Windows edition at [Compare Windows 10 Editions](https://www.microsoft.com/WindowsForBusiness/Compare).
 
 Describes the best practices, location, values, policy management, and security considerations for the **Bypass traverse checking** security policy setting.
 
@@ -56,7 +59,7 @@ The following table lists the actual and effective default policy values. Defaul
 | Domain Controller Effective Default Settings | Administrators<br/>Authenticated Users<br/>Everyone<br/>Local Service<br/>Network Service<br/>Pre-Windows 2000 Compatible Access| 
 | Member Server Effective Default Settings | Administrators<br/>Backup Operators<br/>Users<br/>Everyone<br/>Local Service<br/>Network Service| 
 | Client Computer Effective Default Settings | Administrators<br/>Backup Operators<br/>Users<br/>Everyone<br/>Local Service<br/>Network Service| 
- 
+ 
 ## Policy management
 
 Permissions to files and folders are controlled though the appropriate configuration of file system access control lists (ACLs).The ability to traverse the folder does not provide any Read or Write permissions to the user.
@@ -95,5 +98,5 @@ The Windows operating systems and many applications were designed with the expec
 ## Related topics
 
 - [User Rights Assignment](user-rights-assignment.md)
- 
- 
+ 
+ 

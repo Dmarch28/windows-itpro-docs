@@ -2,12 +2,16 @@
 title: 5633(S, F) A request was made to authenticate to a wired network. (Windows 10)
 description: Describes security event 5633(S, F) A request was made to authenticate to a wired network.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 5633(S, F): A request was made to authenticate to a wired network.
@@ -61,7 +65,6 @@ It typically generates when network adapter connects to new wired network.
  <Data Name="ErrorCode">0x0</Data> 
  </EventData>
 </Event>
-
 ```
 
 ***Required Server Roles:*** None.

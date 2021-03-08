@@ -2,24 +2,27 @@
 title: How AppLocker works (Windows 10)
 description: This topic for the IT professional provides links to topics about AppLocker architecture and components, processes and interactions, rules and policies.
 ms.assetid: 24bb1d73-0ff5-4af7-8b8a-2fa44d4ddbcd
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # How AppLocker works
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for the IT professional provides links to topics about AppLocker architecture and components, processes and interactions, rules and policies.
 

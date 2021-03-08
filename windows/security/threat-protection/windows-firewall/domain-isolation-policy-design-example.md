@@ -1,18 +1,21 @@
 ---
 title: Domain Isolation Policy Design Example (Windows 10)
-description: Domain Isolation Policy Design Example
+description: This example uses a fictitious company to illustrate domain isolation policy design in Windows Defender Firewall with Advanced Security.
 ms.assetid: 704dcf58-286f-41aa-80af-c81720aa7fc5
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Domain Isolation Policy Design Example
@@ -61,4 +64,4 @@ The following groups were created by using the Active Directory Users and Comput
 
 >**Note:**  If you are designing GPOs for only Windows 8, Windows 7, Windows Vista, Windows Server 2012, Windows Server 2008, and Windows Server 2008 R2, you can design your GPOs in nested groups. For example, you can make the boundary group a member of the isolated domain group, so that it receives the firewall and basic isolated domain settings through that nested membership, with only the changes supplied by the boundary zone GPO. However, devices that are running older versions of Windows can only support a single IPsec policy being active at a time. The policies for each GPO must be complete (and to a great extent redundant with each other), because you cannot layer them as you can in the newer versions of Windows. For simplicity, this guide describes the techniques used to create the independent, non-layered policies. We recommend that you create and periodically run a script that compares the memberships of the groups that must be mutually exclusive and reports any devices that are incorrectly assigned to more than one group.
 
-**Next: **[Server Isolation Policy Design Example](server-isolation-policy-design-example.md)
+**Next:** [Server Isolation Policy Design Example](server-isolation-policy-design-example.md)

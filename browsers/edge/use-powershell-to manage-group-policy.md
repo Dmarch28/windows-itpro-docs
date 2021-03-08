@@ -5,11 +5,13 @@ ms.prod: edge
 ms.mktglfcycl: explore
 ms.sitesec: library
 ms.pagetype: security
-title: Security enhancements for Microsoft Edge (Microsoft Edge for IT Pros)
 ms.localizationpriority: medium
 ms.date: 10/02/2018
-ms.author: pashort
-author: shortpatti
+ms.reviewer: 
+audience: itpro
+manager: dansimp
+ms.author: dansimp
+author: dansimp
 ---
 
 # Use Windows PowerShell to manage group policy

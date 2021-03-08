@@ -2,17 +2,20 @@
 title: Maximum lifetime for service ticket (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Maximum lifetime for service ticket security policy setting.
 ms.assetid: 484bf05a-3858-47fc-bc02-6599ca860247
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Maximum lifetime for service ticket
@@ -55,7 +58,7 @@ The following table lists the actual and effective default policy values. Defaul
 | DC Effective Default Settings | 600 minutes| 
 | Member Server Effective Default Settings | Not applicable| 
 | Client Computer Effective Default Settings | Not applicable| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.

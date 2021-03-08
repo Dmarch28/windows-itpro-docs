@@ -2,17 +2,20 @@
 title: Modify an object label (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Modify an object label security policy setting.
 ms.assetid: 3e5a97dd-d363-43a8-ae80-452e866ebfd5
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Modify an object label
@@ -65,7 +68,7 @@ The following table lists the actual and effective default policy values for the
 | Domain Controller Effective Default Settings | Not defined| 
 | Member Server Effective Default Settings | Not defined| 
 | Client Computer Effective Default Settings | Not defined| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.
@@ -94,7 +97,7 @@ This section describes how an attacker might exploit a feature or its configurat
 Anyone with the **Modify an object label** user right can change the integrity level of a file or process so that it becomes elevated or decreased to a point where it can be deleted by lower integrity processes. Either of these states effectively circumvents the protection that is offered by 
 Windows Integrity Controls and makes your system vulnerable to attacks by malicious software.
 
-If malicious software is set with an elevated integrity level such as Trusted Installer or System, administrator accounts do not have sufficient integrity levels to delete the program from the system. In that case, use of the **Modify an object label** right is mandated so that the object can be re-labeled. However, the re-labeling must occur by using a process that is at the same or a higher level of integrity than the object that you are attempting to re-label.
+If malicious software is set with an elevated integrity level such as Trusted Installer or System, administrator accounts do not have sufficient integrity levels to delete the program from the system. In that case, use of the **Modify an object label** right is mandated so that the object can be relabeled. However, the relabeling must occur by using a process that is at the same or a higher level of integrity than the object that you are attempting to relabel.
 
 ### Countermeasure
 

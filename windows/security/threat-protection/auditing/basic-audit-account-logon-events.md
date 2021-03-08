@@ -2,17 +2,20 @@
 title: Audit account logon events (Windows 10)
 description: Determines whether to audit each instance of a user logging on to or logging off from another device in which this device is used to validate the account.
 ms.assetid: 84B44181-E325-49A1-8398-AECC3CE0A516
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: none
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Audit account logon events
@@ -45,9 +48,9 @@ You can configure this security setting by opening the appropriate policy under 
 | 681          | Logon failure. A domain account logon was attempted. This event is not generated in Windows XP or in the Windows Server 2003 family. |
 | 682          | A user has reconnected to a disconnected terminal server session.                                                                    |
 | 683          | A user disconnected a terminal server session without logging off.                                                                   |
- 
+ 
 ## Related topics
 
 - [Basic security audit policy settings](basic-security-audit-policy-settings.md)
- 
- 
+ 
+ 

@@ -2,17 +2,20 @@
 title: Debug programs (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Debug programs security policy setting.
 ms.assetid: 594d9f2c-8ffc-444b-9522-75615ec87786
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Debug programs
@@ -24,7 +27,7 @@ Describes the best practices, location, values, policy management, and security 
 
 ## Reference
 
-This policy setting determines which users can attach to or open any process, even those they do not own. Developers who are debugging their own applications do not need to be assigned this user right. Developers who are debugging new system components need this user right. This user right provides access to sensitive and critical operating-system components.
+This policy setting determines which users can attach to or open any process, even a process they do not own. Developers who are debugging their own applications do not need this user right. Developers who are debugging new system components need this user right. This user right provides access to sensitive and critical operating-system components.
 
 Constant: SeDebugPrivilege
 
@@ -55,7 +58,7 @@ The following table lists the actual and effective default policy values for the
 | Domain Controller Effective Default Settings | Administrators | 
 | Member Server Effective Default Settings | Administrators | 
 | Client Computer Effective Default Settings | Administrators | 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

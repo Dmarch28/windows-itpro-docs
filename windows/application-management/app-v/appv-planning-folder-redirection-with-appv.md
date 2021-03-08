@@ -1,12 +1,15 @@
 ---
 title: Planning to Use Folder Redirection with App-V (Windows 10)
-description: Planning to Use Folder Redirection with App-V
-author: MaggiePucciEvans
+description: Learn about folder redirection with App-V. Folder redirection enables users and administrators to redirect the path of a folder to a new location.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # Planning to Use Folder Redirection with App-V
@@ -57,6 +60,6 @@ The following table describes how folder redirection works when %AppData% is red
 |When the virtual environment starts.|The virtual file system (VFS) AppData folder is mapped to the local AppData folder (%LocalAppData%) instead of to the user’s roaming AppData folder (%AppData%).<br>- LocalAppData contains a local cache of the user’s roaming AppData folder for the package in use. The local cache is located under ```%LocalAppData%\Microsoft\AppV\Client\VFS\PackageGUID\AppData```<br>- The latest data from the user’s roaming AppData folder is copied to and replaces the data currently in the local cache.<br>- While the virtual environment is running, data continues to be saved to the local cache. Data is served only out of %LocalAppData% and is not moved or synchronized with %AppData% until the end user shuts down the computer.<br>- Entries to the AppData folder are made using the user context, not the system context.|
 |When the virtual environment shuts down.|The local cached data in AppData (roaming) is zipped up and copied to the “real” roaming AppData folder in %AppData%. A time stamp that indicates the last known upload is simultaneously saved as a registry key under ```HKCU\Software\Microsoft\AppV\Client\Packages\<PACKAGE_GUID>\AppDataTime```. App-V keeps the three most recent copies of the compressed data under %AppData% for redundancy.|
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+

@@ -1,18 +1,24 @@
 ---
 title: Get Started with UE-V
-description: Get Started with UE-V
-author: MaggiePucciEvans
+description: Use the steps in this article to deploy User Experience Virtualization (UE-V) for the first time in a test environment.
+author: dansimp
 ms.pagetype: mdop, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 03/08/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ---
 
 # Get Started with UE-V
 
 **Applies to**
 -   Windows 10, version 1607
+
+>[!NOTE]
+>This documentation is for the most recent version of UE-V. If you're looking for information about UE-V 2.x, which was included in the Microsoft Desktop Optimization Pack (MDOP), see [Get Started with UE-V 2.x](https://docs.microsoft.com/microsoft-desktop-optimization-pack/uev-v2/get-started-with-ue-v-2x-new-uevv2).
 
 Follow the steps in this topic to deploy User Experience Virtualization (UE-V) for the first time in a test environment. Evaluate UE-V to determine whether it’s the right solution to manage user settings across multiple devices within your enterprise.
 
@@ -25,7 +31,7 @@ The standard installation of UE-V synchronizes the default Microsoft Windows and
 
 -   [Step 2: Deploy the settings storage location](#step-2-deploy-the-settings-storage-location). Explains how to deploy a settings storage location. All UE-V deployments require a location to store settings packages that contain the synchronized setting values.
 
--   [Step 3: Enable and configure the UE-V service](#step-3-enable-the-ue-v-service-on-user-devices). Explains how to enable to UE-V service on user devices and configure the storage path. To synchronize settings using UE-V, devices must have the UE-V service enabled and running.
+-   [Step 3: Enable and configure the UE-V service](#step-3-enable-and-configure-the-ue-v-service-on-user-devices). Explains how to enable to UE-V service on user devices and configure the storage path. To synchronize settings using UE-V, devices must have the UE-V service enabled and running.
 
 -   [Step 4: Test Your UE-V evaluation deployment](#step-4-test-your-ue-v-evaluation-deployment). Run a few tests on two computers with the UE-V service enabled to see how UE-V works and if it meets your organization’s needs.
 
@@ -148,9 +154,9 @@ You’re ready to run a few tests on your UE-V evaluation deployment to see how 
 
 5.  You can change the settings in Computer B back to the original Computer A settings. Then log off Computer B and log in to Computer A to verify the changes.
 
-## Have a suggestion for UE-V?
 
-Add or vote on suggestions on the [User Experience Virtualization feedback site](http://uev.uservoice.com/forums/280428-microsoft-user-experience-virtualization).<br>For UE-V issues, use the [UE-V TechNet Forum](https://social.technet.microsoft.com/Forums/en-us/home?forum=mdopuev&filter=alltypes&sort=lastpostdesc).
+
+For UE-V issues, use the [UE-V TechNet Forum](https://social.technet.microsoft.com/Forums/en-us/home?forum=mdopuev&filter=alltypes&sort=lastpostdesc).
 
 ## Other resources for this feature
 
@@ -160,8 +166,8 @@ Add or vote on suggestions on the [User Experience Virtualization feedback site]
 
 -   [Upgrade to UE-V for Windows 10](uev-upgrade-uev-from-previous-releases.md)
 
--   [Administering UE-V ](uev-administering-uev.md)
+-   [Administering UE-V](uev-administering-uev.md)
 
--   [Troubleshooting UE-V ](uev-troubleshooting.md)
+-   [Troubleshooting UE-V](uev-troubleshooting.md)
 
 -   [Technical Reference for UE-V](uev-technical-reference.md)

@@ -1,18 +1,21 @@
 ---
 title: Planning Server Isolation Zones (Windows 10)
-description: Planning Server Isolation Zones
+description: Learn how to restrict access to a server to approved users by using a server isolation zone in Windows Defender Firewall with Advanced Security.
 ms.assetid: 5f63c929-589e-4b64-82ea-515d62765b7b
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Planning Server Isolation Zones
@@ -77,4 +80,4 @@ GPOs for devices running at least Windows Server 2008 should include the follow
 
     >**Note:**  For a sample template for these registry settings, see [Appendix A: Sample GPO Template Files for Settings Used in this Guide](appendix-a-sample-gpo-template-files-for-settings-used-in-this-guide.md).
 
-**Next: **[Planning Certificate-based Authentication](planning-certificate-based-authentication.md)
+**Next:** [Planning Certificate-based Authentication](planning-certificate-based-authentication.md)

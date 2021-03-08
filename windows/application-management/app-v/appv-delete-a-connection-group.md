@@ -1,12 +1,15 @@
 ---
 title: How to delete a connection group (Windows 10)
-description: How to delete a connection group.
-author: MaggiePucciEvans
+description: Learn how to delete an existing App-V connection group in the App-V Management Console and where to find information about managing connection groups.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 09/27/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # How to delete a connection group
@@ -21,9 +24,9 @@ Use the following procedure to delete an existing App-V connection group.
 
 2. Right-click the connection group to be removed and select **delete**.
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

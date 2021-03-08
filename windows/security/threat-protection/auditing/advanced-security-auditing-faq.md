@@ -2,17 +2,20 @@
 title: Advanced security auditing FAQ (Windows 10)
 description: This topic for the IT professional lists questions and answers about understanding, deploying, and managing security audit policies.
 ms.assetid: 80f8f187-0916-43c2-a7e8-ea712b115a06
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: none
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Advanced security auditing FAQ
@@ -83,7 +86,7 @@ The rules that govern how Group Policy settings are applied propagate to the sub
 | - | - | - | -|
 | Detailed File Share Auditing | Success | Failure | Success |
 | Process Creation Auditing | Disabled | Success | Disabled |
-| Logon Auditing | Success | Failure | Failure |
+| Logon Auditing | Failure | Success | Failure |
 
 ## <a href="" id="bkmk-14"></a>What is the difference between an object DACL and an object SACL?
 

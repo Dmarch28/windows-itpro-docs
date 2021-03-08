@@ -2,17 +2,20 @@
 title: Implementing Your Windows Defender Firewall with Advanced Security Design Plan (Windows 10)
 description: Implementing Your Windows Defender Firewall with Advanced Security Design Plan
 ms.assetid: 15f609d5-5e4e-4a71-9eff-493a2e3e40f9
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 08/17/2017
+ms.technology: mde
 ---
 
 # Implementing Your Windows Defender Firewall with Advanced Security Design Plan
@@ -46,7 +49,7 @@ Use the following parent checklists in this section of the guide to become famil
 
 -   [Checklist: Implementing a Domain Isolation Policy Design](checklist-implementing-a-domain-isolation-policy-design.md)
 
--   [Checklist: Implementing a Domain Isolation Policy Design](checklist-implementing-a-domain-isolation-policy-design.md)
+-   [Checklist: Implementing a Standalone Server Isolation Policy Design](checklist-implementing-a-standalone-server-isolation-policy-design.md)
 
 -   [Checklist: Implementing a Certificate-based Isolation Policy Design](checklist-implementing-a-certificate-based-isolation-policy-design.md)
 

@@ -2,12 +2,15 @@
 title: Manage corporate devices (Windows 10)
 description: You can use the same management tools to manage all device types running Windows 10 desktops, laptops, tablets, and phones.
 ms.assetid: 62D6710C-E59C-4077-9C7E-CE0A92DFC05D
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 keywords: ["MDM", "device management"]
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: devices
-author: jdeckerms
+author: dansimp
 ms.localizationpriority: medium
 ms.date: 09/21/2017
 ms.topic: article
@@ -39,7 +42,7 @@ You can use the same management tools to manage all device types running Windows
 
 ## Learn more
 
-[How to bulk-enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](https://technet.microsoft.com/library/mt627898.aspx)
+[How to bulk-enroll devices with On-premises Mobile Device Management in Microsoft Endpoint Configuration Manager](https://technet.microsoft.com/library/mt627898.aspx)
 
 [Azure AD, Microsoft Intune and Windows 10 - Using the cloud to modernize enterprise mobility](https://blogs.technet.microsoft.com/enterprisemobility/2015/06/12/azure-ad-microsoft-intune-and-windows-10-using-the-cloud-to-modernize-enterprise-mobility/)
 

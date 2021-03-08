@@ -2,12 +2,14 @@
 title: Manage Windows 10 Start and taskbar layout  (Windows 10)
 description: Organizations might want to deploy a customized Start and taskbar layout to devices.
 ms.assetid: 2E94743B-6A49-463C-9448-B7DD19D9CD6A
+ms.reviewer: 
+manager: dansimp
 keywords: ["start screen", "start menu"]
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jdeckerms
-ms.author: jdecker
+author: dansimp
+ms.author: dansimp
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 06/19/2018
@@ -18,7 +20,7 @@ ms.date: 06/19/2018
 
 **Applies to**
 
--   Windows 10
+-   Windows 10, Windows Server 2016 with Desktop Experience, Windows Server 2019 with Desktop Experience
 
 > **Looking for consumer information?** [See what's on the Start menu](https://support.microsoft.com/help/17195/windows-10-see-whats-on-the-menu)
 
@@ -66,7 +68,7 @@ The following table lists the different parts of Start and any applicable policy
 
 [Learn how to customize and export Start layout](customize-and-export-start-layout.md)
 
- ## Taskbar options
+ ## Taskbar options
 
 Starting in Windows 10, version 1607, you can pin additional apps to the taskbar and remove default pinned apps from the taskbar. You can specify different taskbar configurations based on device locale or region.
 
@@ -75,8 +77,8 @@ There are three categories of apps that might be pinned to a taskbar:
 * Default Windows apps, pinned during operating system installation (Microsoft Edge, File Explorer, Store)
 * Apps pinned by the enterprise, such as in an unattended Windows setup
 
- >[!NOTE]
- >We recommend using [the layoutmodification.xml method](configure-windows-10-taskbar.md) to configure taskbar options, rather than the earlier method of using [TaskbarLinks](https://go.microsoft.com/fwlink/p/?LinkId=761230) in an unattended Windows setup file.
+  >[!NOTE]
+  >We recommend using [the layoutmodification.xml method](configure-windows-10-taskbar.md) to configure taskbar options, rather than the earlier method of using [TaskbarLinks](https://go.microsoft.com/fwlink/p/?LinkId=761230) in an unattended Windows setup file.
 
 The following example shows how apps will be pinned - Windows default apps to the left (blue circle), apps pinned by the user in the center (orange triangle), and apps that you pin using XML to the right (green square).
 
@@ -130,7 +132,7 @@ If your Start layout customization is not applied as expected, open **Event View
 - [Start layout XML for desktop editions of Windows 10 (reference)](start-layout-xml-desktop.md)
 - [Customize Windows 10 Start and taskbar with Group Policy](customize-windows-10-start-screens-by-using-group-policy.md)
 - [Customize Windows 10 Start and taskbar with provisioning packages](customize-windows-10-start-screens-by-using-provisioning-packages-and-icd.md)
-- [Customize Windows 10 Start and tasbkar with mobile device management (MDM)](customize-windows-10-start-screens-by-using-mobile-device-management.md)
+- [Customize Windows 10 Start and taskbar with mobile device management (MDM)](customize-windows-10-start-screens-by-using-mobile-device-management.md)
 - [Changes to Start policies in Windows 10](changes-to-start-policies-in-windows-10.md)
 
 

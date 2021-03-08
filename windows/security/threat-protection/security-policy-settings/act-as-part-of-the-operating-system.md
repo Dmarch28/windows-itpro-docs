@@ -2,17 +2,20 @@
 title: Act as part of the operating system (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Act as part of the operating system security policy setting.
 ms.assetid: c1b7e084-a9f7-4377-b678-07cc913c8b0c
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Act as part of the operating system
@@ -51,7 +54,7 @@ The following table lists the actual and effective default policy values for the
 | Domain controller effective default settings | Not defined |
 | Member server effective default settings | Not defined |
 | Client computer effective default settings | Not defined |
- 
+ 
 ## Policy management
 
 A restart of the device is not required for this policy setting to be effective.
@@ -86,4 +89,4 @@ There should be little or no impact because the **Act as part of the operating s
 
 ## Related topics
 [User Rights Assignment](user-rights-assignment.md)
- 
+ 

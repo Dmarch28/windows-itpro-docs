@@ -1,15 +1,17 @@
 ---
-title: Win32CompatibilityAppraiser  CSP
-description: 
-ms.author: maricia
+title: Win32CompatibilityAppraiser CSP
+description: Learn how the Win32CompatibilityAppraiser configuration service provider enables the IT admin to query the current status of the Appraiser and UTC telementry health.
+ms.author: dansimp
 ms.topic: article
 ms.prod: w10
 ms.technology: windows
-author: MariciaAlforque
+author: manikadhiman
 ms.date: 07/19/2018
+ms.reviewer: 
+manager: dansimp
 ---
 
-#  Win32CompatibilityAppraiser CSP 
+# Win32CompatibilityAppraiser CSP 
 
 > [!WARNING]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.

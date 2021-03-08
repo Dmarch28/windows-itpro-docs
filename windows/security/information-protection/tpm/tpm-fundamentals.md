@@ -1,13 +1,14 @@
 ---
 title: TPM fundamentals (Windows 10)
-description: This topic for the IT professional provides a description of the components of the Trusted Platform Module (TPM 1.2 and TPM 2.0) and explains how they are used to mitigate dictionary attacks.
+description: Inform yourself about the components of the Trusted Platform Module (TPM 1.2 and TPM 2.0) and how they are used to mitigate dictionary attacks.
 ms.assetid: ac90f5f9-9a15-4e87-b00d-4adcf2ec3000
+ms.reviewer: 
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-author: andreabichsel
-ms.author: justinha
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
@@ -150,5 +151,5 @@ The Windows TPM-based smart card, which is a virtual smart card, can be configur
 
 - [Trusted Platform Module](trusted-platform-module-top-node.md) (list of topics)
 - [TPM Cmdlets in Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)
-- [TPM WMI providers](https://msdn.microsoft.com/library/aa376476.aspx)
-- [Prepare your organization for BitLocker: Planning and Policies - TPM configurations](https://technet.microsoft.com/itpro/windows/keep-secure/prepare-your-organization-for-bitlocker-planning-and-policies#bkmk-tpmconfigurations)
+- [TPM WMI providers](https://docs.microsoft.com/windows/win32/secprov/security-wmi-providers-reference)
+- [Prepare your organization for BitLocker: Planning and Policies - TPM configurations](https://docs.microsoft.com/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies#tpm-hardware-configurations)

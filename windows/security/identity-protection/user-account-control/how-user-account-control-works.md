@@ -2,13 +2,14 @@
 title: How User Account Control works (Windows 10)
 description: User Account Control (UAC) is a fundamental component of Microsoft's overall security vision. UAC helps mitigate the impact of malware.
 ms.assetid: 9f921779-0fd3-4206-b0e4-05a19883ee59
+ms.reviewer: 
 ms.prod: w10
 ms.mktglfcycl: operate
 ms.sitesec: library
 ms.pagetype: security
 audience: ITPro
-author: danihalfin
-ms.author: daniha
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
@@ -108,9 +109,7 @@ To better understand each component, review the table below:
 <th>Description</th>
 </tr>
 <tr>
-<td>
-<p><b>User</b></p>
-</td>
+<th colspan="2">User</th>
 </tr>
 <tr>
 <td>
@@ -137,16 +136,14 @@ To better understand each component, review the table below:
 </td>
 </tr>
 <tr>
-<td>
-<p><b>System</b></p>
-</td>
+<th colspan="2">System</th>
 </tr>
 <tr>
 <td>
 <p>Application Information service</p>
 </td>
 <td>
-<p>A system service that helps start apps that require one or more elevated privileges or user rights to run, such as local administrative tasks, and apps that require higher integrity levels. The Application Information service helps start such apps by creating a new process for the application with an administrative user's full access token when elevation is required and (depending on Group Policy) consent is given by the user to do so.</p>
+<p>A system service that helps start apps that require one or more elevated privileges or user rights to run, such as local administrative tasks, and apps that require higher integrity levels. The Application Information service helps start such apps by creating a new process for the application with an administrative user&#39;s full access token when elevation is required and (depending on Group Policy) consent is given by the user to do so.</p>
 </td>
 </tr>
 <tr>
@@ -209,7 +206,7 @@ To better understand each component, review the table below:
 <p>If the secure desktop is enabled, all elevation requests go to the secure desktop regardless of prompt behavior policy settings for administrators and standard users.</p>
 </li>
 <li>
-<p>If the secure desktop is not enabled, all elevation requests go to the interactive user's desktop, and the per-user settings for administrators and standard users are used.</p>
+<p>If the secure desktop is not enabled, all elevation requests go to the interactive user&#39;s desktop, and the per-user settings for administrators and standard users are used.</p>
 </li>
 </ul>
 </td>
@@ -243,12 +240,11 @@ To better understand each component, review the table below:
 <p>Installer detection</p>
 </td>
 <td>
-<p>Installer detection detects setup files, which helps prevent installations from being run without the user's knowledge and consent.</p>
+<p>Installer detection detects setup files, which helps prevent installations from being run without the user&#39;s knowledge and consent.</p>
 </td>
 </tr>
 <tr>
-<td>
-<p><b>Kernel</b></p>
+<th colspan="2">Kernel</th>
 </td>
 </tr>
 <tr>
@@ -268,17 +264,19 @@ To better understand each component, review the table below:
 </td>
 </tr>
 </table>
- 
-The slider will never turn UAC completely off. If you set it to **Never notify**, it will:
+ 
+The slider will never turn UAC completely off. If you set it to <b>Never notify</b>, it will:
 
 -   Keep the UAC service running.
 -   Cause all elevation request initiated by administrators to be auto-approved without showing a UAC prompt.
 -   Automatically deny all elevation requests for standard users.
 
->**Important:**  In order to fully disable UAC you must disable the policy **User Account Control: Run all administrators in Admin Approval Mode**.
- 
->**Warning:**  Universal Windows apps will not work when UAC is disabled.
- 
+> [!IMPORTANT]
+> In order to fully disable UAC you must disable the policy **User Account Control: Run all administrators in Admin Approval Mode**.
+
+> [!WARNING]
+> Some Universal Windows Platform apps may not work when UAC is disabled.
+ 
 ### Virtualization
 
 Because system administrators in enterprise environments attempt to secure systems, many line-of-business (LOB) applications are designed to use only a standard user access token. As a result, you do not need to replace the majority of apps when UAC is turned on.
@@ -290,7 +288,9 @@ Most app tasks operate properly by using virtualization features. Although virtu
 Virtualization is not an option in the following scenarios:
 
 -   Virtualization does not apply to apps that are elevated and run with a full administrative access token.
+
 -   Virtualization supports only 32-bit apps. Non-elevated 64-bit apps simply receive an access denied message when they attempt to acquire a handle (a unique identifier) to a Windows object. Native Windows 64-bit apps are required to be compatible with UAC and to write data into the correct locations.
+
 -   Virtualization is disabled if the app includes an app manifest with a requested execution level attribute.
 
 ### Request execution levels
@@ -318,6 +318,8 @@ Before a 32-bit process is created, the following attributes are checked to dete
 -   Key attributes in the resource script data are linked in the executable file.
 -   There are targeted sequences of bytes within the executable file.
 
->**Note:**  The keywords and sequences of bytes were derived from common characteristics observed from various installer technologies.
- 
->**Note:**  The User Account Control: Detect application installations and prompt for elevation policy setting must be enabled for installer detection to detect installation programs. For more info, see [User Account Control security policy settings](user-account-control-security-policy-settings.md).
+> [!NOTE]
+> The keywords and sequences of bytes were derived from common characteristics observed from various installer technologies.
+
+> [!NOTE]
+> The User Account Control: Detect application installations and prompt for elevation policy setting must be enabled for installer detection to detect installation programs. For more info, see [User Account Control security policy settings](user-account-control-security-policy-settings.md).

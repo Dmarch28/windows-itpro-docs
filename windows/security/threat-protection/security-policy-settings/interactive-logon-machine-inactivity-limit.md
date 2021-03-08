@@ -2,17 +2,20 @@
 title: Interactive logon Machine inactivity limit (Windows 10)
 description: Describes the best practices, location, values, management, and security considerations for the Interactive logon Machine inactivity limit security policy setting.
 ms.assetid: 7065b4a9-0d52-41d5-afc4-5aedfc4162b5
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/18/2018
+ms.technology: mde
 ---
 
 # Interactive logon: Machine inactivity limit
@@ -24,7 +27,10 @@ Describes the best practices, location, values, management, and security conside
 
 ## Reference
 
-Beginning with Windows Server 2012 and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user’s session locks by invoking the screen saver. This policy setting allows you to control the locking time by using Group Policy.
+Beginning with Windows Server 2012 and Windows 8, Windows detects user-input inactivity of a sign-in (logon) session by using the security policy setting **Interactive logon: Machine inactivity limit**. If the amount of inactive time exceeds the inactivity limit set by this policy, then the user’s session locks by invoking the screen saver (screen saver should be active on the destination machine). You can activate the screen saver by enabling the Group Policy **User Configuration\Administrative Templates\Control Panel\Personalization\Enable screen saver**. This policy setting allows you to control the locking time by using Group Policy.
+
+> [!NOTE]
+> If the **Interactive logon: Machine inactivity limit** security policy setting is configured, the device locks not only when inactive time exceeds the inactivity limit, but also when the screensaver activates or when the display turns off because of power settings.
 
 ### Possible values
 
@@ -40,6 +46,8 @@ Set the time for elapsed user-input inactivity based on the device’s usage and
 
 Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options
 
+Computer Configuration\\Policies\\Windows Settings\\Security Settings\\Local Policies\\Security Options (While creating and linking group policy on server)
+
 ### Default values
 
 The following table lists the actual and effective default values for this policy. Default values are also listed on the policy’s property page.
@@ -52,7 +60,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Disabled| 
 | Member Server Effective Default Settings | Disabled| 
 | Client Computer Effective Default Settings | Disabled| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

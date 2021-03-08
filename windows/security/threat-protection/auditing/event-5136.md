@@ -2,12 +2,16 @@
 title: 5136(S) A directory service object was modified. (Windows 10)
 description: Describes security event 5136(S) A directory service object was modified.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 5136(S): A directory service object was modified.
@@ -70,7 +74,6 @@ For a change operation you will typically see two 5136 events for one action, wi
  <Data Name="OperationType">%%14675</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** Active Directory domain controller.
@@ -114,15 +117,15 @@ For a change operation you will typically see two 5136 events for one action, wi
 -   **DN** \[Type = UnicodeString\]: distinguished name of the object that was modified.
 
 > **Note**&nbsp;&nbsp;The LDAP API references an LDAP object by its **distinguished name (DN)**. A DN is a sequence of relative distinguished names (RDN) connected by commas.
-
+> 
 > An RDN is an attribute with an associated value in the form attribute=value; . These are examples of RDNs attributes:
-
+> 
 > • DC - domainComponent
-
+> 
 > • CN - commonName
-
+> 
 > • OU - organizationalUnitName
-
+> 
 > • O - organizationName
 
 -   **GUID** \[Type = GUID\]**:** each Active Directory object has globally unique identifier (GUID), which is a 128-bit value that is unique not only in the enterprise but also across the world. GUIDs are assigned to every object created by Active Directory. Each object's GUID is stored in its Object-GUID (**objectGUID**) property.
@@ -236,5 +239,5 @@ For 5136(S): A directory service object was modified.
 
 -   If you need to monitor modifications to specific Active Directory attributes, monitor for **LDAP Display Name** field with specific attribute name.
 
--   It is better to monitor **Operation\\Type = Value Added** events, because you will see the new value of attribute. At the same time you can correlate to previous **Operation\\Type = Value Deleted** event with the same **Correlation ID** to see the previous value.
+-   It is better to monitor **Operation\\Type = Value Added** events, because you will see the new value of attribute. At the same time you can correlate to previous **Operation\\Type = Value Deleted** event with the same **Correlation ID** to see the previous value.
 

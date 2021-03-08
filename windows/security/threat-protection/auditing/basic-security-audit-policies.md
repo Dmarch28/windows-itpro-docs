@@ -1,18 +1,21 @@
 ---
 title: Basic security audit policies (Windows 10)
-description: Before you implement auditing, you must decide on an auditing policy.
+description: Learn about basic security audit policies that specify the categories of security-related events that you want to audit for the needs of your organization.
 ms.assetid: 3B678568-7AD7-4734-9BB4-53CF5E04E1D3
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: none
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Basic security audit policies
@@ -44,5 +47,5 @@ If you choose to audit access to objects as part of your audit policy, you must 
 | [Apply a basic audit policy on a file or folder](apply-a-basic-audit-policy-on-a-file-or-folder.md) | You can apply audit policies to individual files and folders on your computer by setting the permission type to record successful access attempts or failed access attempts in the security log. | 
 | [View the security event log](view-the-security-event-log.md) | The security log records each event as defined by the audit policies you set on each object.| 
 | [Basic security audit policy settings](basic-security-audit-policy-settings.md) | Basic security audit policy settings are found under Computer Configuration\Windows Settings\Security Settings\Local Policies\Audit Policy.|
- 
- 
+ 
+ 

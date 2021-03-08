@@ -2,17 +2,20 @@
 title: Profile single process (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Profile single process security policy setting.
 ms.assetid: c0963de4-4f5e-430e-bfcd-dfd68e66a075
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Profile single process
@@ -24,7 +27,7 @@ Describes the best practices, location, values, policy management, and security 
 
 ## Reference
 
-This policy setting determines which users can view a sample performance of an application process. Typically, you do not need this user right to use the performance reporting tools included in the operating system. However, you do need this user right if the system’s monitor components are configured to collect data through Windows Management Instrumentation (WMI).
+This policy setting determines which users can view a sample performance of an application process. Typically, you don't need this user right to use the performance reporting tools included in the operating system. However, you do need this user right if the system’s monitor components are configured to collect data through Windows Management Instrumentation (WMI).
 
 Constant: SeProfileSingleProcessPrivilege
 
@@ -36,7 +39,7 @@ Constant: SeProfileSingleProcessPrivilege
 
 ### Best practices
 
--   This right should not be granted to individual users. It should be granted only for trusted applications that monitor other programs.
+-   This right shouldn't be granted to individual users. It should be granted only for trusted applications that monitor other programs.
 
 ### Location
 
@@ -48,7 +51,7 @@ By default this setting is Administrators on domain controllers and on stand-alo
 
 The following table lists the actual and effective default policy values. Default values are also listed on the policy’s property page.
 
-| Server type or GPO | Default value |
+| Server type or Group Policy Object (GPO) | Default value |
 | - | - |
 | Default Domain Policy| Not defined| 
 | Default Domain Controller Policy | Administrators| 
@@ -56,7 +59,7 @@ The following table lists the actual and effective default policy values. Defaul
 | Domain Controller Effective Default Settings | Administrators| 
 | Member Server Effective Default Settings | Administrators| 
 | Client Computer Effective Default Settings| Administrators| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.
@@ -67,7 +70,7 @@ Any change to the user rights assignment for an account becomes effective the ne
 
 ### Group Policy
 
-Settings are applied in the following order through a Group Policy Object (GPO), which will overwrite settings on the local computer at the next Group Policy update:
+Settings are applied in the following order through a Group Policy Object, which will overwrite settings on the local computer at the next Group Policy update:
 
 1.  Local policy settings
 2.  Site policy settings

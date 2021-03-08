@@ -2,10 +2,13 @@
 ms.localizationpriority: medium
 ms.mktglfcycl: support
 description: Info about some of the known issues using the Internet Exporer Customization Wizard and a custom Internet Explorer install package.
-author: shortpatti
-ms.author: pashort
+author: dansimp
+ms.author: dansimp
 ms.prod: ie11
 ms.assetid: 9e22cc61-6c63-4cab-bfdf-6fe49db945e4
+ms.reviewer: 
+audience: itpro
+manager: dansimp
 title: Troubleshoot custom package and IEAK 11 problems (Internet Explorer Administration Kit 11 for IT Pros)
 ms.sitesec: library
 ms.date: 07/27/2017
@@ -13,6 +16,9 @@ ms.date: 07/27/2017
 
 
 # Troubleshoot custom package and IEAK 11 problems
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+
 While the Internet Explorer Customization Wizard has been around for quite a while, there are still some known issues that you might encounter while deploying or managing your custom IE install package.
 
 ## I am unable to locate some of the wizard pages
@@ -73,8 +79,8 @@ If you cannot uninstall IE using **Uninstall or change a program** in the Contro
 ## The Internet Explorer Customization Wizard 11 does not work with user names that user double-byte character sets
 The customization wizard does not work with user names that use double-byte character sets, such as Chinese or Japanese. To fix this, set the **TEMP** and **TMP** environmental variables to a path that does not use these characters (for example, C:\temp).
 
-1.	Open **System Properties**, click the **Advanced** tab, and then click **Environmental Variables**.
-2.	Click Edit, and then modify the **TEMP** and **TMP** environmental variables to a non-user profile directory.
+1. Open **System Properties**, click the **Advanced** tab, and then click **Environmental Variables**.
+2. Click Edit, and then modify the **TEMP** and **TMP** environmental variables to a non-user profile directory.
 
  
 ## Unicode characters are not supported in IEAK 11 path names
@@ -95,14 +101,14 @@ Pressing the **F1** button on the **Automatic Version Synchronization** page of 
 ## Certificate installation does not work on IEAK 11
 IEAK 11 doesn't install certificates added using the Add a Root Certificate page of the Internet Explorer Customization Wizard 11. Administrators can manually install certificates using the Certificates Microsoft Management Console snap-in (Certmgr.msc) or using the command-line tool, Certificate Manager (Certmgr.exe).
 
->[!NOTE]
->This applies only when using the External licensing mode of IEAK 11.
+> [!NOTE]
+> This applies only when using the External licensing mode of IEAK 11.
 
 ## The Additional Settings page appears in the wrong language when using a localized version of IEAK 11
 When using IEAK 11 in other languages, the settings on the Additional Settings page appear in the language of the target platform, regardless of the IEAK 11 language.
 
->[!NOTE]
->This applies only when using the Internal licensing mode of IEAK 11.
+> [!NOTE]
+> This applies only when using the Internal licensing mode of IEAK 11.
 
 To work around this issue, run the customization wizard following these steps:
 1. On the **Language Selection** page, select the language that matches the language of your installed IEAK 11.

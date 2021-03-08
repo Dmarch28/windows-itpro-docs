@@ -2,12 +2,16 @@
 title: 4768(S, F) A Kerberos authentication ticket (TGT) was requested. (Windows 10)
 description: Describes security event 4768(S, F) A Kerberos authentication ticket (TGT) was requested.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4768(S, F): A Kerberos authentication ticket (TGT) was requested.
@@ -71,7 +75,6 @@ This event doesn't generate for **Result Codes**: 0x10, 0x17 and 0x18. Event “
  <Data Name="CertThumbprint">564DFAEE99C71D62ABC553E695BD8DBC46669413</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** Active Directory domain controller.
@@ -183,7 +186,7 @@ The most common values:
 | 31    | Validate                 | This option is used only by the ticket-granting service. The VALIDATE option indicates that the request is to validate a postdated ticket. Should not be in use, because postdated tickets are not supported by KILE.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 > Table 2. Kerberos ticket flags.
-
+> 
 > **Note**&nbsp;&nbsp;[KILE](https://msdn.microsoft.com/library/cc233855.aspx) **(Microsoft Kerberos Protocol Extension)** – Kerberos protocol extensions used in Microsoft operating systems. These extensions provide additional capability for authorization information including group memberships, interactive logon information, and integrity levels.
 
 -   **Result Code** \[Type = HexInt32\]**:** hexadecimal result code of TGT issue operation. The “Table 3. TGT/TGS issue error codes.” contains the list of the most common error codes for this event.
@@ -217,7 +220,7 @@ The most common values:
 | 0x18                                                       | KDC\_ERR\_PREAUTH\_FAILED              | Pre-authentication information was invalid                                  | The wrong password was provided.<br>This error code cannot occur in event “[4768](event-4768.md). A Kerberos authentication ticket (TGT) was requested”. It occurs in “[4771](event-4771.md). Kerberos pre-authentication failed” event.                                                                                                                                                                                                                                                                                                                                                     |
 | 0x19                                                       | KDC\_ERR\_PREAUTH\_REQUIRED            | Additional pre-authentication required                                      | This error often occurs in UNIX interoperability scenarios. MIT-Kerberos clients do not request pre-authentication when they send a KRB\_AS\_REQ message. If pre-authentication is required (the default), Windows systems will send this error. Most MIT-Kerberos clients will respond to this error by giving the pre-authentication, in which case the error can be ignored, but some clients might not respond in this way.                                                                                                                                                                                              |
 | 0x1A                                                       | KDC\_ERR\_SERVER\_NOMATCH              | KDC does not know about the requested server                                | No information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 0x1B                                                       | KDC\_ERR\_SVC\_UNAVAILABLE             | KDC is unavailable                                                          | No information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| 0x1D                                                       | KDC\_ERR\_SVC\_UNAVAILABLE             | KDC is unavailable                                                          | No information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 0x1F                                                       | KRB\_AP\_ERR\_BAD\_INTEGRITY           | Integrity check on decrypted field failed                                   | The authenticator was encrypted with something other than the session key. The result is that the client cannot decrypt the resulting message. The modification of the message could be the result of an attack or it could be because of network noise.                                                                                                                                                                                                                                                                                                                                                                     |
 | 0x20                                                       | KRB\_AP\_ERR\_TKT\_EXPIRED             | The ticket has expired                                                      | The smaller the value for the “Maximum lifetime for user ticket” Kerberos policy setting, the more likely it is that this error will occur. Because ticket renewal is automatic, you should not have to do anything if you get this message.                                                                                                                                                                                                                                                                                                                                                                                 |
 | 0x21                                                       | KRB\_AP\_ERR\_TKT\_NYV                 | The ticket is not yet valid                                                 | The ticket presented to the server is not yet valid (in relationship to the server time). The most probable cause is that the clocks on the KDC and the client are not synchronized.<br>If cross-realm Kerberos authentication is being attempted, then you should verify time synchronization between the KDC in the target realm and the KDC in the client realm, as well.                                                                                                                                                                                                                                           |
@@ -253,7 +256,7 @@ The most common values:
 
 -   **Ticket Encryption Type** \[Type = HexInt32\]: the cryptographic suite that was used for issued TGT.
 
- 
+
 <span id="kerberos-encryption-types" />
 ## Table 4. Kerberos encryption types
 
@@ -302,13 +305,13 @@ For 4768(S, F): A Kerberos authentication ticket (TGT) was requested.
 | **High-value accounts**: You might have high-value domain or local accounts for which you need to monitor each action.<br>Examples of high-value accounts are database administrators, built-in local administrator account, domain administrators, service accounts, domain controller accounts and so on. | Monitor this event with the **“User ID”** that corresponds to the high-value account or accounts.                                                              |
 | **Anomalies or malicious actions**: You might have specific requirements for detecting anomalies or monitoring potential malicious actions. For example, you might need to monitor for use of an account outside of working hours.                                                                                | When you monitor for anomalies or malicious actions, use the **“User ID”** (with other information) to monitor how or when a particular account is being used. |
 | **Non-active accounts**: You might have non-active, disabled, or guest accounts, or other accounts that should never be used.                                                                                                                                                                                     | Monitor this event with the **“User ID”** that corresponds to the accounts that should never be used.                                                          |
-| **Account whitelist**: You might have a specific whitelist of accounts that are the only ones allowed to perform actions corresponding to particular events.                                                                                                                                                      | If this event corresponds to a “whitelist-only” action, review the **“User ID”** for accounts that are outside the whitelist.                                  |
+| **Account whitelist**: You might have a specific allow list of accounts that are the only ones allowed to perform actions corresponding to particular events.                                                                                                                                                      | If this event corresponds to a “whitelist-only” action, review the **“User ID”** for accounts that are outside the allow list.                                  |
 | **External accounts**: You might be monitoring accounts from another domain, or “external” accounts that are not allowed to perform certain actions (represented by certain specific events).                                                                                                                     | Monitor this event for the **“Supplied Realm Name”** corresponding to another domain or “external” location.                                                   |
 | **Account naming conventions**: Your organization might have specific naming conventions for account names.                                                                                                                                                                                                       | Monitor “**User ID”** for names that don’t comply with naming conventions.                                                                                     |
 
 -   You can track all [4768](event-4768.md) events where the **Client Address** is not from your internal IP range or not from private IP ranges.
 
--   If you know that **Account Name** should be used only from known list of IP addresses, track all **Client Address** values for this **Account Name** in [4768](event-4768.md) events. If **Client Address** is not from the whitelist, generate the alert.
+-   If you know that **Account Name** should be used only from known list of IP addresses, track all **Client Address** values for this **Account Name** in [4768](event-4768.md) events. If **Client Address** is not from the allow list, generate the alert.
 
 -   All **Client Address** = ::1 means local authentication. If you know the list of accounts which should log on to the domain controllers, then you need to monitor for all possible violations, where **Client Address** = ::1 and **Account Name** is not allowed to log on to any domain controller.
 

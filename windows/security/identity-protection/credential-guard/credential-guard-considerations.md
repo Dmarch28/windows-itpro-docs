@@ -1,5 +1,5 @@
-﻿---
-title: Considerations when using Windows Defender Credential Guard (Windows 10)
+---
+title: Advice while using Windows Defender Credential Guard (Windows 10)
 description: Considerations and recommendations for certain scenarios when using Windows Defender Credential Guard in Windows 10.
 ms.prod: w10
 ms.mktglfcycl: explore
@@ -7,12 +7,13 @@ ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
 audience: ITPro
-author: danihalfin
-ms.author: daniha
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
 ms.date: 08/31/2017
+ms.reviewer: 
 ---
 
 # Considerations when using Windows Defender Credential Guard
@@ -20,9 +21,6 @@ ms.date: 08/31/2017
 **Applies to**
 -   Windows 10
 -   Windows Server 2016
-
-Prefer video? See [Credentials Protected by Windows Defender Credential Guard](https://mva.microsoft.com/en-us/training-courses/deep-dive-into-credential-guard-16651?l=mD3geLJyC_8304300474)
-in the **Deep Dive into Windows Defender Credential Guard** video series.
 
 Passwords are still weak. We recommend that in addition to deploying Windows Defender Credential Guard, organizations move away from passwords to other authentication methods, such as physical smart cards, virtual smart cards, or Windows Hello for Business.
 
@@ -44,9 +42,9 @@ As the depth and breadth of protections provided by Windows Defender Credential 
 ### Saved Windows Credentials Protected
 
 Starting with Windows 10, version 1511, domain credentials that are stored with Credential Manager are protected with Windows Defender Credential Guard. Credential Manager allows you to store three types of credentials: Windows credentials, certificate-based credentials, and generic credentials. Generic credentials such as user names and passwords that you use to log on to websites are not protected since the applications require your cleartext password. If the application does not need a copy of the password, they can save domain credentials as Windows credentials that are protected. Windows credentials are used to connect to other computers on a network. The following considerations apply to the Windows Defender Credential Guard protections for Credential Manager:
-    -   Windows credentials saved by Remote Desktop Client cannot be sent to a remote host. Attempts to use saved Windows credentials fail, displaying the error message "Logon attempt failed."
-    -   Applications that extract Windows credentials fail.
-    -   When credentials are backed up from a PC that has Windows Defender Credential Guard enabled, the Windows credentials cannot be restored. If you need to back up your credentials, you must do this before you enable Windows Defender Credential Guard. Otherwise, you cannot restore those credentials.
+* Windows credentials saved by Remote Desktop Client cannot be sent to a remote host. Attempts to use saved Windows credentials fail, displaying the error message "Logon attempt failed."
+* Applications that extract Windows credentials fail.
+* When credentials are backed up from a PC that has Windows Defender Credential Guard enabled, the Windows credentials cannot be restored. If you need to back up your credentials, you must do this before you enable Windows Defender Credential Guard. Otherwise, you cannot restore those credentials.
 
 ## Clearing TPM Considerations
 Virtualization-based Security (VBS) uses the TPM to protect its key. So when the TPM is cleared then the TPM protected key used to encrypt VBS secrets is lost.
@@ -98,6 +96,6 @@ When data protected with user DPAPI is unusable, then the user loses access to a
 
 ## See also
 
-**Deep Dive into Windows Defender Credential Guard: Related videos**
+**Related videos**
 
-[Virtualization-based security](https://mva.microsoft.com/en-us/training-courses/deep-dive-into-credential-guard-16651?l=1CoELLJyC_6704300474)
+[What is virtualization-based security?](https://www.linkedin.com/learning/microsoft-cybersecurity-stack-advanced-identity-and-endpoint-protection/what-is-virtualization-based-security)

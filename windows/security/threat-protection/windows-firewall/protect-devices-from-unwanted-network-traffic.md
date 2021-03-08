@@ -1,21 +1,24 @@
 ---
-title: Protect Devices from Unwanted Network Traffic (Windows 10)
-description: Protect Devices from Unwanted Network Traffic
+title: Protect devices from unwanted network traffic (Windows 10)
+description: Learn how running a host-based firewall on every device in your organization can help protect against attacks as part of a defense-in-depth security strategy.
 ms.assetid: 307d2b38-e8c4-4358-ae16-f2143af965dc
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
-# Protect Devices from Unwanted Network Traffic
+# Protect devices from unwanted network traffic 
 
 **Applies to**
 -   Windows 10
@@ -45,4 +48,4 @@ The following component is recommended for this deployment goal:
 
 Other means of deploying a firewall policy are available, such as creating scripts that use the netsh command-line tool, and then running those scripts on each computer in the organization. This guide uses Active Directory as a recommended means of deployment because of its ability to scale to very large organizations.
 
-**Next: **[Restrict Access to Only Trusted Devices](restrict-access-to-only-trusted-devices.md)
+**Next:** [Restrict Access to Only Trusted Devices](restrict-access-to-only-trusted-devices.md)

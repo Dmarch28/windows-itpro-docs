@@ -1,18 +1,21 @@
 ---
 title: Network security Minimum session security for NTLM SSP based (including secure RPC) clients (Windows 10)
-description: Describes the best practices, location, values, policy management and security considerations for the Network security Minimum session security for NTLM SSP based (including secure RPC) clients security policy setting.
+description: Best practices and more for the security policy setting, Network security Minimum session security for NTLM SSP based (including secure RPC) clients.
 ms.assetid: 89903de8-23d0-4e0f-9bef-c00cb7aebf00
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 07/27/2017
+ms.technology: mde
 ---
 
 # Network security: Minimum session security for NTLM SSP based (including secure RPC) clients
@@ -56,7 +59,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Require 128-bit encryption| 
 | Member Server Effective Default Settings | Require 128-bit encryption| 
 | Client Computer Effective Default Settings | Require 128-bit encryption| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

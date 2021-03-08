@@ -2,17 +2,20 @@
 title: User Rights Assignment (Windows 10)
 description: Provides an overview and links to information about the User Rights Assignment security policy settings user rights that are available in Windows.
 ms.assetid: 99340252-60be-4c79-b0a5-56fbe1a9b0c5
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # User Rights Assignment
@@ -67,6 +70,7 @@ The following table links to each security policy setting and provides the const
 | [Manage auditing and security log](manage-auditing-and-security-log.md)| SeSecurityPrivilege| 
 | [Modify an object label](modify-an-object-label.md) | SeRelabelPrivilege| 
 | [Modify firmware environment values](modify-firmware-environment-values.md)| SeSystemEnvironmentPrivilege| 
+| [Obtain an impersonation token for another user in the same session](impersonate-a-client-after-authentication.md) | SeDelegateSessionUserImpersonatePrivilege|
 | [Perform volume maintenance tasks](perform-volume-maintenance-tasks.md) | SeManageVolumePrivilege| 
 | [Profile single process](profile-single-process.md) | SeProfileSingleProcessPrivilege| 
 | [Profile system performance](profile-system-performance.md) | SeSystemProfilePrivilege| 
@@ -76,7 +80,8 @@ The following table links to each security policy setting and provides the const
 | [Shut down the system](shut-down-the-system.md) | SeShutdownPrivilege| 
 | [Synchronize directory service data](synchronize-directory-service-data.md)| SeSyncAgentPrivilege| 
 | [Take ownership of files or other objects](take-ownership-of-files-or-other-objects.md) | SeTakeOwnershipPrivilege| 
- 
+
+ 
 ## Related topics
 
 - [Security policy settings reference](security-policy-settings-reference.md)

@@ -1,18 +1,21 @@
 ---
 title: Network access Remotely accessible registry paths (Windows 10)
-description: Describes the best practices, location, values, policy management and security considerations for the Network access Remotely accessible registry paths security policy setting.
+description: Best practices, location, values, policy management and security considerations for the policy setting, Network access Remotely accessible registry paths.
 ms.assetid: 977f86ea-864f-4f1b-9756-22220efce0bd
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Network access: Remotely accessible registry paths
@@ -55,7 +58,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | See the following registry key combination| 
 | Member Server Effective Default Settings | See the following registry key combination| 
 | Client Computer Effective Default Settings | See the following registry key combination| 
- 
+ 
 The combination of all the following registry keys apply to the previous settings:
 
 1.  System\\CurrentControlSet\\Control\\ProductOptions
@@ -87,7 +90,7 @@ Configure the **Network access: Remotely accessible registry paths** setting to 
 Remote management tools such as the Microsoft Baseline Security Analyzer (MBSA) and Configuration Manager require remote access to the registry to properly monitor and manage those computers. If you remove the default registry paths from the list of accessible ones, such remote management tools could fail.
 
 >**Note:**  If you want to allow remote access, you must also enable the Remote Registry service.
- 
+ 
 ## Related topics
 
 - [Security Options](security-options.md)

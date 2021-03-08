@@ -1,13 +1,15 @@
 ---
 title: Advanced troubleshooting for TCP/IP issues
-description: Learn how to troubleshoot TCP/IP issues.
+description: Learn how to troubleshoot common problems in a TCP/IP network environment, for example by collecting data using Network monitor.
 ms.prod: w10
 ms.sitesec: library
 ms.topic: troubleshooting
-author: kaushika-msft
+author: dansimp
 ms.localizationpriority: medium
-ms.author: kaushika
+ms.author: dansimp
 ms.date: 12/06/2018
+ms.reviewer: 
+manager: dansimp
 ---
 
 # Advanced troubleshooting for TCP/IP issues

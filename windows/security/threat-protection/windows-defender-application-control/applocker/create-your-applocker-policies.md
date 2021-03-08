@@ -2,24 +2,27 @@
 title: Create Your AppLocker policies (Windows 10)
 description: This overview topic for the IT professional describes the steps to create an AppLocker policy and prepare it for deployment.
 ms.assetid: d339dee2-4da2-4d4a-b46e-f1dfb7cb4bf0
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Create Your AppLocker policies
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This overview topic for the IT professional describes the steps to create an AppLocker policy and prepare it for deployment.
 

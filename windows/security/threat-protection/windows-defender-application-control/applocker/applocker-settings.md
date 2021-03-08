@@ -2,24 +2,27 @@
 title: AppLocker settings (Windows 10)
 description: This topic for the IT professional lists the settings used by AppLocker.
 ms.assetid: 9cb4aa19-77c0-4415-9968-bd07dab86839
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # AppLocker settings
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for the IT professional lists the settings used by AppLocker.
 
@@ -34,7 +37,7 @@ The following table describes the settings and values used by AppLocker.
 | Network ports | Not applicable | 
 | Service accounts | Not applicable | 
 | Performance counters | Not applicable | 
- 
+ 
 ## Related topics
 
 - [AppLocker technical reference](applocker-technical-reference.md)

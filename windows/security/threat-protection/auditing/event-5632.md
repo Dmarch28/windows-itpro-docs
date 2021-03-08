@@ -2,12 +2,16 @@
 title: 5632(S, F) A request was made to authenticate to a wireless network. (Windows 10)
 description: Describes security event 5632(S, F) A request was made to authenticate to a wireless network.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 5632(S, F): A request was made to authenticate to a wireless network.
@@ -67,7 +71,6 @@ It typically generates when network adapter connects to new wireless network.
  <Data Name="EAPErrorCode">0x0</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** None.

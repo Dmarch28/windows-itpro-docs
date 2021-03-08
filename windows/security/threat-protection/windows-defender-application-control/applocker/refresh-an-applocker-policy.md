@@ -2,24 +2,27 @@
 title: Refresh an AppLocker policy (Windows 10)
 description: This topic for IT professionals describes the steps to force an update for an AppLocker policy.
 ms.assetid: 3f24fcbc-3926-46b9-a1a2-dd036edab8a9
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Refresh an AppLocker policy
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for IT professionals describes the steps to force an update for an AppLocker policy.
 

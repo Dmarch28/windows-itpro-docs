@@ -1,12 +1,15 @@
 ---
 title: How to create a connection croup with user-published and globally published packages (Windows 10)
 description: How to create a connection croup with user-published and globally published packages.
-author: MaggiePucciEvans
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 07/10/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # How to create a connection croup with user-published and globally published packages
@@ -55,9 +58,9 @@ Here are some important things to know before you get started:
 
 3. Follow the instructions in [How to create a connection group](appv-create-a-connection-group.md) to create the connection group and  add the user-published and globally published packages.
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

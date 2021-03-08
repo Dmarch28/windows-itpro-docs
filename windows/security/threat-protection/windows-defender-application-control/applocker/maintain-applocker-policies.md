@@ -1,25 +1,27 @@
 ---
 title: Maintain AppLocker policies (Windows 10)
-description: This topic describes how to maintain rules within AppLocker policies.
+description: Learn how to maintain rules within AppLocker policies. View common AppLocker maintenance scenarios and see the methods to use to maintain AppLocker policies.
 ms.assetid: b4fbfdfe-ef3d-49e0-a390-f2dfe74602bc
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
-ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Maintain AppLocker policies
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic describes how to maintain rules within AppLocker policies.
 
@@ -39,7 +41,9 @@ There are three methods you can use to maintain AppLocker policies:
 -   [Maintaining AppLocker policies on the local computer](#bkmk-applkr-use-locsnapin)
 
 ## <a href="" id="bkmk-applkr-use-mdm"></a>Maintaining AppLocker policies by using Mobile Device Management (MDM)
+Using the AppLocker configuration service provider, you can select which apps are allowed or blocked from running. Using the CSP, you can configure app restrictions based on grouping (such as EXE, MSI, DLL, Store apps and more) and then chose how to enforce different policies for different apps.
 
+For more information, see the [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
 
 
 ## <a href="" id="bkmk-applkr-use-gp"></a>Maintaining AppLocker policies by using Group Policy

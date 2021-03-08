@@ -1,14 +1,15 @@
 ---
 title: User Account Control security policy settings (Windows 10)
-description: You can use security policies to configure how User Account Control works in your organization. They can be configured locally by using the Local Security Policy snap-in (secpol.msc) or configured for the domain, OU, or specific groups by Group Policy.
+description: You can use security policies to configure how User Account Control works in your organization.
 ms.assetid: 3D75A9AC-69BB-4EF2-ACB3-1769791E1B98
+ms.reviewer: 
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 audience: ITPro
-author: danihalfin
-ms.author: daniha
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
@@ -64,7 +65,7 @@ This policy setting controls the behavior of the elevation prompt for standard u
 This policy setting controls the behavior of application installation detection for the computer.
 
 -   **Enabled** (Default) When an app installation package is detected that requires elevation of privilege, the user is prompted to enter an administrative user name and password. If the user enters valid credentials, the operation continues with the applicable privilege.
--   **Disabled** App installation packages are not detected and prompted for elevation. Enterprises that are running standard user desktops and use delegated installation technologies, such as Group Policy or System Center Configuration Manager should disable this policy setting. In this case, installer detection is unnecessary.
+-   **Disabled** App installation packages are not detected and prompted for elevation. Enterprises that are running standard user desktops and use delegated installation technologies, such as Group Policy or Microsoft Endpoint Manager should disable this policy setting. In this case, installer detection is unnecessary.
 
 ## User Account Control: Only elevate executable files that are signed and validated
 
@@ -95,6 +96,7 @@ This policy setting controls whether the elevation request prompt is displayed o
 
 -   **Enabled** (Default) All elevation requests go to the secure desktop regardless of prompt behavior policy settings for administrators and standard users.
 -   **Disabled** All elevation requests go to the interactive user's desktop. Prompt behavior policy settings for administrators and standard users are used.
+
 ## User Account Control: Virtualize file and registry write failures to per-user locations
 
 This policy setting controls whether application write failures are redirected to defined registry and file system locations. This policy setting mitigates applications that run as administrator and write run-time application data to %ProgramFiles%, %Windir%, %Windir%\\system32, or HKLM\\Software.

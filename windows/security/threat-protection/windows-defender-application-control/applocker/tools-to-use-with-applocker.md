@@ -2,24 +2,27 @@
 title: Tools to use with AppLocker (Windows 10)
 description: This topic for the IT professional describes the tools available to create and administer AppLocker policies.
 ms.assetid: db2b7cb3-7643-4be5-84eb-46ba551e1ad1
-ms.prod: w10
+ms.reviewer: 
+ms.author: macapara
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: mjcaparas
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 09/21/2017
+ms.technology: mde
 ---
 
 # Tools to use with AppLocker
 
 **Applies to**
- -   Windows 10 
- -   Windows Server
+- Windows 10
+- Windows Server
 
 This topic for the IT professional describes the tools available to create and administer AppLocker policies.
 

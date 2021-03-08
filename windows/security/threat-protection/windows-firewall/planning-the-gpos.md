@@ -1,18 +1,21 @@
 ---
 title: Planning the GPOs (Windows 10)
-description: Planning the GPOs
+description: Learn about planning Group Policy Objects for your isolation zones in Windows Defender Firewall with Advanced Security, after you design the zone layout.
 ms.assetid: 11949ca3-a11c-4a16-b297-0862432eb5b4
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 08/17/2017
+ms.technology: mde
 ---
 
 # Planning the GPOs

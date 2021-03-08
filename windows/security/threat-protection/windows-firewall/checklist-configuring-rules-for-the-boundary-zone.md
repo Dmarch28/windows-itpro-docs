@@ -1,18 +1,21 @@
 ---
 title: Checklist Configuring Rules for the Boundary Zone (Windows 10)
-description: Checklist Configuring Rules for the Boundary Zone
+description: Use these tasks to configure connection security rules and IPsec settings in your GPOs to implement the boundary zone in an isolated domain.
 ms.assetid: 25fe0197-de5a-4b4c-bc44-c6f0620ea94b
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Checklist: Configuring Rules for the Boundary Zone

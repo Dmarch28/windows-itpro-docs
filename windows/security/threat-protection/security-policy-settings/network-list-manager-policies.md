@@ -1,18 +1,21 @@
 ---
 title: Network List Manager policies (Windows 10)
-description: Network List Manager policies are security settings that you can use to configure different aspects of how networks are listed and displayed on one device or on many devices.
+description: Network List Manager policies are security settings that configure different aspects of how networks are listed and displayed on one device or on many devices.
 ms.assetid: bd8109d4-b07c-4beb-a9a6-affae2ba2fda
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Network List Manager policies

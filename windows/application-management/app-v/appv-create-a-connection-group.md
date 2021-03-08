@@ -1,12 +1,15 @@
 ---
 title: How to create a connection group (Windows 10)
-description: How to create a connection group with the App-V Management Console.
-author: MaggiePucciEvans
+description: Learn how to create a connection group with the App-V Management Console and where to find information about managing connection groups.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 07/10/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # How to create a connection group
@@ -38,9 +41,9 @@ When you place packages in a connection group, their package root paths merge. I
 
 6. After adding all the applications and configuring Active Directory access, select **Apply**.
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

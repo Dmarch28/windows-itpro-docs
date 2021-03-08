@@ -2,17 +2,20 @@
 title: Maximum lifetime for user ticket (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Maximum lifetime for user ticket policy setting.
 ms.assetid: bcb4ff59-334d-4c2f-99af-eca2b64011dc
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Maximum lifetime for user ticket
@@ -35,7 +38,7 @@ If the value for this policy setting is too high, users might be able to access 
 
 ### Best practices
 
--   It is advisable to set **Maximum lifetime for user ticket** to 10 hours.
+-   We recommend that you set the **Maximum lifetime for user ticket** to 10 hours.
 
 ### Location
 
@@ -53,7 +56,7 @@ The following table lists the actual and effective default policy values. Defaul
 | Domain Controller Effective Default Settings | 10 hours| 
 | Member Server Effective Default Settings | Not applicable| 
 | Client Computer Effective Default Settings | Not applicable| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.

@@ -1,18 +1,21 @@
 ---
 title: Network security Restrict NTLM Add remote server exceptions for NTLM authentication (Windows 10)
-description: Describes the best practices, location, values, management aspects, and security considerations for the Network security Restrict NTLM Add remote server exceptions for NTLM authentication security policy setting.
+description: Best practices, security considerations, and more for the policy setting, Network security Restrict NTLM Add remote server exceptions for NTLM authentication.
 ms.assetid: 9b017399-0a54-4580-bfae-614c2beda3a1
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Network security: Restrict NTLM: Add remote server exceptions for NTLM authentication
@@ -62,7 +65,7 @@ Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Sec
 | Domain controller effective default settings | Not defined| 
 | Member server effective default settings | Not defined| 
 | Client computer effective default settings| Not defined| 
- 
+ 
 ## Policy management
 
 This section describes the features and tools that are available to help you manage this policy.

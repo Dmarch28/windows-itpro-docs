@@ -3,10 +3,13 @@ ms.localizationpriority: medium
 ms.mktglfcycl: deploy
 ms.pagetype: security
 description: Use out-of-date ActiveX control blocking to help you know when IE prevents a webpage from loading outdated ActiveX controls and to update the outdated control, so that it’s safer to use.
-author: shortpatti
-ms.author: pashort
+author: dansimp
+ms.author: dansimp
 ms.prod: ie11
 ms.assetid: e61866bb-1ff1-4a8d-96f2-61d3534e8199
+ms.reviewer: 
+audience: itpro
+manager: dansimp
 title: Out-of-date ActiveX control blocking (Internet Explorer 11 for IT Pros)
 ms.sitesec: library
 ms.date: 05/10/2018
@@ -14,6 +17,9 @@ ms.date: 05/10/2018
 
 
 # Out-of-date ActiveX control blocking
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+
 
 **Applies to:**
 
@@ -102,7 +108,10 @@ reg add "HKCU\Software\Microsoft\Internet Explorer\VersionManager" /v DownloadVe
 ```
 Turning off this automatic download breaks the out-of-date ActiveX control blocking feature by not letting the version list update with newly outdated controls, potentially compromising the security of your computer. Use this configuration option at your own risk.
 
-## Out-of-date ActiveX control blocking on managed devices
+## Out-of-date ActiveX control blocking
+
+[!INCLUDE [Microsoft 365 workloads end of support for IE11](../includes/microsoft-365-ie-end-of-support.md)]
+ on managed devices
 Out-of-date ActiveX control blocking includes four new Group Policy settings that you can use to manage your web browser configuration, based on your domain controller. You can download the administrative templates, including the new settings, from the [Administrative templates (.admx) for Windows 10](https://go.microsoft.com/fwlink/p/?LinkId=746579) page or the [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://go.microsoft.com/fwlink/p/?LinkId=746580) page, depending on your operating system.
 
 ### Group Policy settings
@@ -189,15 +198,15 @@ Before running the PowerShell script, you must copy both the .ps1 and .mof file 
 
  **To configure IE to use WMI logging**
 
-1.  Open your Group Policy editor and turn on the `Administrative Templates\Windows Components\Internet Explorer\Turn on ActiveX control logging in IE` setting.
+1. Open your Group Policy editor and turn on the `Administrative Templates\Windows Components\Internet Explorer\Turn on ActiveX control logging in IE` setting.
 
-2.  On the client device, start PowerShell in elevated mode (using admin privileges) and run `ConfigureWMILogging.ps1` by by-passing the PowerShell execution policy, using this command:
-```
-powershell –ExecutionPolicy Bypass .\ConfigureWMILogging.ps1
-``` 
-For more info, see [about_Execution_Policies](https://go.microsoft.com/fwlink/p/?linkid=517460).
+2. On the client device, start PowerShell in elevated mode (using admin privileges) and run `ConfigureWMILogging.ps1` by by-passing the PowerShell execution policy, using this command:
+   ```
+   powershell –ExecutionPolicy Bypass .\ConfigureWMILogging.ps1
+   ``` 
+   For more info, see [about_Execution_Policies](https://go.microsoft.com/fwlink/p/?linkid=517460).
 
-3.  **Optional:** Set up your domain firewall for WMI data. For more info, see [Collect data using Enterprise Site Discovery](collect-data-using-enterprise-site-discovery.md).
+3. **Optional:** Set up your domain firewall for WMI data. For more info, see [Collect data using Enterprise Site Discovery](collect-data-using-enterprise-site-discovery.md).
 
 The inventory info appears in the WMI class, `IEAXControlBlockingAuditInfo`, located in the WMI namespace, *root\\cimv2\\IETelemetry*. To collect the inventory info from your client computers, we recommend using System Center 2012 R2 Configuration Manager or any agent that can access the WMI data. For more info, see [Collect data using Enterprise Site Discovery](collect-data-using-enterprise-site-discovery.md).
 

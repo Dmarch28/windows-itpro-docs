@@ -2,17 +2,20 @@
 title: Audit process tracking (Windows 10)
 description: Determines whether to audit detailed tracking information for events such as program activation, process exit, handle duplication, and indirect object access.
 ms.assetid: 91AC5C1E-F4DA-4B16-BEE2-C92D66E4CEEA
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: none
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Audit process tracking
@@ -45,9 +48,9 @@ You can configure this security setting under Computer Configuration\\Windows Se
 | 600 | A process was assigned a primary token.| 
 | 601 | A user attempted to install a service. |
 | 602 | A scheduler job was created. |
- 
+ 
 ## Related topics
 
 - [Basic security audit policy settings](basic-security-audit-policy-settings.md)
- 
- 
+ 
+ 

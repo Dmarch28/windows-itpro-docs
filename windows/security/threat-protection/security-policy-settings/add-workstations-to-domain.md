@@ -2,17 +2,20 @@
 title: Add workstations to domain (Windows 10)
 description: Describes the best practices, location, values, policy management and security considerations for the Add workstations to domain security policy setting.
 ms.assetid: b0c21af4-c928-4344-b1f1-58ef162ad0b3
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Add workstations to domain

@@ -6,11 +6,13 @@ ms.prod: w10
 ms.mktglfcycl: plan
 ms.sitesec: library
 ms.localizationpriority: medium
-author: trudyha
-searchScope:
+author: dansimp
+searchScope: 
   - Store
-ms.author: trudyha
+ms.author: dansimp
 ms.date: 01/05/2018
+ms.reviewer: 
+manager: dansimp
 ms.topic: conceptual
 ---
 
@@ -47,9 +49,9 @@ You can purchase individual Minecraft: Education Edition subscriptions for you a
 
 To purchase individual Minecraft: Education Edition subscriptions (i.e. direct purchase):
 
-1.	Sign in to [Microsoft Store for Education](https://educationstore.microsoft.com/) with your Office 365 account.
-2.	Click on [Minecraft: Education Edition](https://educationstore.microsoft.com/en-us/store/details/minecraft-education-edition/9nblggh4r2r6) (or use Search the Store to find it)
-3.	Click **Buy**
+1. Sign in to [Microsoft Store for Education](https://educationstore.microsoft.com/) with your Office 365 account.
+2. Click on [Minecraft: Education Edition](https://educationstore.microsoft.com/en-us/store/details/minecraft-education-edition/9nblggh4r2r6) (or use Search the Store to find it)
+3. Click **Buy**
 
 >[!Note]
 >Administrators can restrict the ability for teachers to purchase applications in the Microsoft Store for Education. If you do not have the ability to Buy, contact your school administration or IT administrator.
@@ -91,7 +93,7 @@ Enter email addresses for your students, and each student will get an email with
    ![Assign to people showing student name](images/minecraft-assign-to-people-name.png)
    
    You can assign the app to students with work or school accounts. </br>
-   If you don't find the student, you can still assign the app to them if self-service sign up is supported for your domain. Students will receive an email with a link to Office 365 portal where they can create an account, and then install **Minecraft: Education Edition**. Questions about self-service sign up? Check with your admin. 
+   If you don't find the student, you can still assign the app to them if self-service sign up is supported for your domain. Students will receive an email with a link to Microsoft 365 admin center where they can create an account, and then install **Minecraft: Education Edition**. Questions about self-service sign up? Check with your admin. 
 
 
 **To finish Minecraft install (for students)**

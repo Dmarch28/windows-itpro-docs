@@ -1,13 +1,17 @@
 ---
 title: Other Events (Windows 10)
-description: Describes the Other Events auditing subcategory.
+description: Describes the Other Events auditing subcategory, which includes events that are generated automatically and enabled by default.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: medium
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # Other Events

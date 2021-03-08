@@ -1,12 +1,15 @@
 ---
 title: Install the App-V Sequencer (Windows 10)
-description: Install the App-V Sequencer
-author: MaggiePucciEvans
+description: Learn how to install the App-V Sequencer to convert Win32 applications into virtual packages for deployment to user devices.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # Install the App-V Sequencer
@@ -49,9 +52,9 @@ You can also use the command line to install the App-V sequencer. The following 
 
 For more information regarding the sequencer installation, you can view the error log in the **%temp%** folder. To review the log files, click **Start**, type **%temp%**, and then look for the **appv\_ log**.
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

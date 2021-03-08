@@ -1,18 +1,21 @@
 ---
 title: Interactive logon Machine account lockout threshold (Windows 10)
-description: Describes the best practices, location, values, management, and security considerations for the Interactive logon Machine account lockout threshold security policy setting.
+description: Best practices, location, values, management, and security considerations for the security policy setting, Interactive logon Machine account lockout threshold.
 ms.assetid: ebbd8e22-2611-4ebe-9db9-d49344e631e4
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Interactive logon: Machine account lockout threshold
@@ -54,7 +57,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Disabled| 
 | Member Server Effective Default Settings | Disabled |
 | Client Computer Effective Default Settings | Disabled| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

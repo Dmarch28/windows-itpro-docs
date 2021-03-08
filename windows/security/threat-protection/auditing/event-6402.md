@@ -2,12 +2,16 @@
 title: 6402(-) BranchCache The message to the hosted cache offering it data is incorrectly formatted. (Windows 10)
 description: Describes security event 6402(-) BranchCache The message to the hosted cache offering it data is incorrectly formatted.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 6402(-): BranchCache: The message to the hosted cache offering it data is incorrectly formatted.
@@ -25,7 +29,7 @@ There is no example of this event in this document.
 
 ***Event Schema:***
 
-*BranchCache: The message to the hosted cache offering it data is incorrectly formatted. *
+*BranchCache: The message to the hosted cache offering it data is incorrectly formatted.*
 
 *IP address of the client that sent this message: %1*
 

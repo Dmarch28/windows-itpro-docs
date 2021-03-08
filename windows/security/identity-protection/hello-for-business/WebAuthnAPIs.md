@@ -1,18 +1,19 @@
 ---
 title: WebAuthn APIs 
-description: Enabling password-less authentication for your sites and apps
+description: Learn how to use WebAuthn APIs to enable password-less authentication for your sites and apps.
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security, mobile
 audience: ITPro
-author: aabhathipsay
-ms.author: aathipsa
+author: mapalko
+ms.author: mapalko
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: article
 localizationpriority: medium
 ms.date: 02/15/2019
+ms.reviewer: 
 ---
 # WebAuthn APIs for password-less authentication on Windows 10 
 

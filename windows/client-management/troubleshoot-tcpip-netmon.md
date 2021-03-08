@@ -4,17 +4,22 @@ description: Learn how to run Network Monitor to collect data for troubleshootin
 ms.prod: w10
 ms.sitesec: library
 ms.topic: troubleshooting
-author: kaushika-msft
+author: dansimp
 ms.localizationpriority: medium
-ms.author: kaushika
+ms.author: dansimp
 ms.date: 12/06/2018
+ms.reviewer: 
+manager: dansimp
 ---
 
 # Collect data using Network Monitor
 
 In this topic, you will learn how to use Microsoft Network Monitor 3.4, which is a tool for capturing network traffic.
 
-To get started, [download and run NM34_x64.exe](https://www.microsoft.com/download/details.aspx?id=4865). When you install Network Monitor, it installs its driver and hooks it to all the network adapters installed on the device. You can see the same on the adapter properties, as shown in the following image.
+> [!NOTE]
+> Network Monitor is the archived protocol analyzer and is no longer under development. **Microsoft Message Analyzer** is the replacement for Network Monitor. For more details, see [Microsoft Message Analyzer Operating Guide](https://docs.microsoft.com/message-analyzer/microsoft-message-analyzer-operating-guide).
+
+To get started, [download Network Monitor tool](https://www.microsoft.com/download/details.aspx?id=4865). When you install Network Monitor, it installs its driver and hooks it to all the network adapters installed on the device. You can see the same on the adapter properties, as shown in the following image:
 
 ![Adapters](images/nm-adapters.png)
 

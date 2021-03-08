@@ -2,6 +2,8 @@
 title: Configure an MDM provider (Windows 10)
 description: For companies or organizations using mobile device management (MDM) tools, those tools can synchronize with Microsoft Store for Business inventory to manage apps with offline licenses.
 ms.assetid: B3A45C8C-A96C-4254-9659-A9B364784673
+ms.reviewer: 
+manager: dansimp
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -41,6 +43,6 @@ After your management tool is added to your Azure AD directory, you can configur
 
 Your MDM tool is ready to use with Microsoft Store. To learn how to configure synchronization and deploy apps, see these topics:
 - [Manage apps you purchased from Microsoft Store for Business with Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune)
-- [Manage apps from Microsoft Store for Business with System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+- [Manage apps from Microsoft Store for Business with Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 For third-party MDM providers or management servers, check your product documentation.

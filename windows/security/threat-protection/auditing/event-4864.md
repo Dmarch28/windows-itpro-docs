@@ -1,13 +1,17 @@
 ---
 title: 4864(S) A namespace collision was detected. (Windows 10)
-description: Describes security event 4864(S) A namespace collision was detected.
+description: Describes security event 4864(S) A namespace collision was detected. This event is generated when a namespace collision is detected.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4864(S): A namespace collision was detected.
@@ -41,7 +45,7 @@ There is no example of this event in this document.
 
 *Security ID:%7*
 
-*New Flags:%8 *
+*New Flags:%8*
 
 ***Required Server Roles:*** Active Directory domain controller.
 

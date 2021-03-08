@@ -2,15 +2,17 @@
 title: Policies enforced on kiosk devices (Windows 10)
 description: Learn about the policies enforced on a device when you configure it as a kiosk.
 ms.assetid: 14DDDC96-88C7-4181-8415-B371F25726C8
+ms.reviewer: 
+manager: dansimp
 keywords: ["lockdown", "app restrictions", "applocker"]
 ms.prod: w10
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: edu, security
-author: jdeckerms
+author: dansimp
 ms.localizationpriority: medium
 ms.date: 07/30/2018
-ms.author: jdecker
+ms.author: dansimp
 ms.topic: article
 ---
 
@@ -38,7 +40,6 @@ Remove access to the context menus for the task bar	| Enabled
 Clear history of recently opened documents on exit |	Enabled
 Prevent users from customizing their Start Screen |	Enabled
 Prevent users from uninstalling applications from Start |		Enabled
-Remove All Programs list from the Start menu |		Enabled
 Remove Run menu from Start Menu	 |	Enabled
 Disable showing balloon notifications as toast |		Enabled
 Do not allow pinning items in Jump Lists |		Enabled

@@ -2,17 +2,20 @@
 title: Devices Restrict floppy access to locally logged-on user only (Windows 10)
 description: Describes the best practices, location, values, and security considerations for the Devices Restrict floppy access to locally logged-on user only security policy setting.
 ms.assetid: 92997910-da95-4c03-ae6f-832915423898
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Devices: Restrict floppy access to locally logged-on user only
@@ -56,7 +59,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Disabled| 
 | Member Server Effective Default Settings | Disabled| 
 | Client Computer Effective Default Settings | Disabled| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

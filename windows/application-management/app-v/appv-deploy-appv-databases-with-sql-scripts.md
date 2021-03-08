@@ -1,12 +1,15 @@
 ---
 title: How to Deploy the App-V Databases by Using SQL Scripts (Windows 10)
-description: How to Deploy the App-V Databases by Using SQL Scripts
-author: MaggiePucciEvans
+description: Learn how to use SQL scripts to install the App-V databases and upgrade the App-V databases to a later version.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # How to deploy the App-V databases by using SQL scripts
@@ -176,9 +179,9 @@ Steps to install "AppVReporting" schema in SQL SERVER.
     ScheduleReportingJob.sql
 ```
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application Virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Related topics
 

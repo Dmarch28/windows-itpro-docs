@@ -2,12 +2,16 @@
 title: 4618(S) A monitored security event pattern has occurred. (Windows 10)
 description: Describes security event 4618(S) A monitored security event pattern has occurred.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4618(S): A monitored security event pattern has occurred.
@@ -29,7 +33,7 @@ Account must have **SeAuditPrivilege** (Generate security audits) to be able to 
 
 -   Only **OrgEventID**, **ComputerName**, and **EventCount** are required—others are optional. Fields not specified appear with “**-**“ in the event description field.
 
--   If a field doesn’t match the expected data type, the event is not generated. (i.e., if **EventCount** = “XYZ” then no event is generated.)
+-   If a field doesn’t match the expected data type, the event is not generated. That is, if **EventCount** = “XYZ”, then no event is generated.
 
 -   **UserSid**, **UserName**, and **UserDomain** are not related to each other (think **SubjectUser** fields, where they are)
 
@@ -95,5 +99,5 @@ Account must have **SeAuditPrivilege** (Generate security audits) to be able to 
 
 For 4618(S): A monitored security event pattern has occurred.
 
--   This event can be invoked only manually/intentionally, it is up to you how interpret this event depends on information you put inside of it.
+-   This event can be invoked only manually/intentionally, it is up to you how to interpret this event depends on information you put inside of it.
 

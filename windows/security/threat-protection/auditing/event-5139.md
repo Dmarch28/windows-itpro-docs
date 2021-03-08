@@ -2,12 +2,16 @@
 title: 5139(S) A directory service object was moved. (Windows 10)
 description: Describes security event 5139(S) A directory service object was moved.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 5139(S): A directory service object was moved.
@@ -65,7 +69,6 @@ This event only generates if the destination object has a particular entry in it
  <Data Name="ObjectClass">user</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** Active Directory domain controller.
@@ -109,15 +112,15 @@ This event only generates if the destination object has a particular entry in it
 -   **Old DN** \[Type = UnicodeString\]: Old distinguished name of moved object.
 
 > **Note**&nbsp;&nbsp;The LDAP API references an LDAP object by its **distinguished name (DN)**. A DN is a sequence of relative distinguished names (RDN) connected by commas.
-
+> 
 > An RDN is an attribute with an associated value in the form attribute=value; . These are examples of RDNs attributes:
-
+> 
 > • DC - domainComponent
-
+> 
 > • CN - commonName
-
+> 
 > • OU - organizationalUnitName
-
+> 
 > • O - organizationName
 
 -   **New DN** \[Type = UnicodeString\]: New distinguished name of moved object. The Active Directory container to which the object was moved.

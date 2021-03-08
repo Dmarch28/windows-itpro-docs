@@ -1,12 +1,15 @@
 ---
 title: Planning for the App-V Sequencer and Client Deployment (Windows 10)
-description: Planning for the App-V Sequencer and Client Deployment
-author: MaggiePucciEvans
+description: Learn what you need to do to plan for the App-V Sequencer and Client deployment, and where to find additional information about the deployment process.
+author: dansimp
 ms.pagetype: mdop, appcompat, virtualization
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.prod: w10
 ms.date: 04/18/2018
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
 ms.topic: article
 ---
 # Planning for the App-V Sequencer and Client Deployment
@@ -47,9 +50,9 @@ The following list displays some of the benefits of using App-V SCS:
 * Reduced deployment risk accelerates application deployment
 * Simplified profile management
 
-## Have a suggestion for App-V?
 
-Add or vote on suggestions on the [Application virtualization feedback site](https://appv.uservoice.com/forums/280448-microsoft-application-virtualization).
+
+
 
 ## Other App-V deployment resources
 

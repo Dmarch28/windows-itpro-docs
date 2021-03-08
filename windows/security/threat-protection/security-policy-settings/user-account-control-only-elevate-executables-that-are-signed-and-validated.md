@@ -1,18 +1,21 @@
 ---
 title: User Account Control Only elevate executables that are signed and validated (Windows 10)
-description: Describes the best practices, location, values, policy management and security considerations for the User Account Control Only elevate executables that are signed and validated security policy setting.
+description: Best practices, security considerations, and more for the security policy setting, User Account Control Only elevate executables that are signed and validated.
 ms.assetid: 64950a95-6985-4db6-9905-1db18557352d
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # User Account Control: Only elevate executables that are signed and validated
@@ -20,7 +23,7 @@ ms.date: 04/19/2017
 **Applies to**
 -   Windows 10
 
-Describes the best practices, location, values, policy management and security considerations for the **User Account Control: Only elevate executables that are signed and validated** security policy setting.
+Describes the best practices, location, values, policy management, and security considerations for the **User Account Control: Only elevate executables that are signed and validated** security policy setting.
 
 ## Reference
 
@@ -61,7 +64,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Disabled| 
 | Member Server Effective Default Settings | Disabled| 
 | Client Computer Effective Default Settings | Disabled| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.
@@ -80,7 +83,7 @@ This section describes how an attacker might exploit a feature or its configurat
 
 ### Vulnerability
 
-Intellectual property, personally identifiable information, and other confidential data are normally manipulated by applications on the computer, and elevated credentials are required to access the information. Users and administrators inherently trust applications that are used with these information sources, and they provide their credentials. If one of these applications is replaced by a rogue application that appears identical to the trusted application, the confidential data could be compromised and the user's administrative credentials would also be compromised.
+Intellectual property, personal information, and other confidential data are normally manipulated by applications on the computer, and elevated credentials are required to access the information. Users and administrators inherently trust applications that are used with these information sources, and they provide their credentials. If one of these applications is replaced by a rogue application that appears identical to the trusted application, the confidential data could be compromised and the user's administrative credentials would also be compromised.
 
 ### Countermeasure
 

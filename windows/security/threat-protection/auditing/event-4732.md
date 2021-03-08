@@ -2,12 +2,16 @@
 title: 4732(S) A member was added to a security-enabled local group. (Windows 10)
 description: Describes security event 4732(S) A member was added to a security-enabled local group.
 ms.pagetype: security
-ms.prod: w10
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: none
-author: Mir0sh
+author: dansimp
 ms.date: 04/19/2017
+ms.reviewer: 
+manager: dansimp
+ms.author: dansimp
+ms.technology: mde
 ---
 
 # 4732(S): A member was added to a security-enabled local group.
@@ -67,7 +71,6 @@ You will typically see “[4735](event-4735.md): A security-enabled local group 
  <Data Name="PrivilegeList">-</Data> 
  </EventData>
  </Event>
-
 ```
 
 ***Required Server Roles:*** None.
@@ -107,15 +110,15 @@ You will typically see “[4735](event-4735.md): A security-enabled local group 
 -   **Account Name** \[Type = UnicodeString\]: distinguished name of account that was added to the group. For example: “CN=Auditor,CN=Users,DC=contoso,DC=local”. For local groups this field typically has “**-**“ value, even if new member is a domain account. For some [well-known security principals](https://support.microsoft.com/kb/243330), such as LOCAL SERVICE or ANONYMOUS LOGON, the value of this field is “-”.
 
 > **Note**&nbsp;&nbsp;The LDAP API references an LDAP object by its **distinguished name (DN)**. A DN is a sequence of relative distinguished names (RDN) connected by commas.
-
+> 
 > An RDN is an attribute with an associated value in the form attribute=value; . These are examples of RDNs attributes:
-
+> 
 > • DC - domainComponent
-
+> 
 > • CN - commonName
-
+> 
 > • OU - organizationalUnitName
-
+> 
 > • O - organizationName
 
 **Group:**
@@ -151,7 +154,7 @@ For 4732(S): A member was added to a security-enabled local group.
 | **High-value accounts**: You might have high-value domain or local accounts for which you need to monitor each action.<br>Examples of high-value accounts are database administrators, built-in local administrator account, domain administrators, service accounts, domain controller accounts and so on.                                                                       | Monitor this event with the **“Subject\\Security ID”** and **“Member\\Security ID”** that correspond to the high-value account or accounts.                                                                                                   |
 | **Anomalies or malicious actions**: You might have specific requirements for detecting anomalies or monitoring potential malicious actions. For example, you might need to monitor for use of an account outside of working hours.                                                                                                                                                      | When you monitor for anomalies or malicious actions, use the **“Subject\\Security ID”** (with other information) to monitor how or when a particular account is being used.                                                                   |
 | **Non-active accounts**: You might have non-active, disabled, or guest accounts, or other accounts that should never be used.                                                                                                                                                                                                                                                           | Monitor this event with the **“Subject\\Security ID”** and **“Member\\Security ID”** that correspond to the accounts that should never be used.                                                                                               |
-| **Account whitelist**: You might have a specific whitelist of accounts that are the only ones allowed to perform actions corresponding to particular events.                                                                                                                                                                                                                            | If this event corresponds to a “whitelist-only” action, review the **“Subject\\Security ID”** for accounts that are outside the whitelist.                                                                                                    |
+| **Account whitelist**: You might have a specific allow list of accounts that are the only ones allowed to perform actions corresponding to particular events.                                                                                                                                                                                                                            | If this event corresponds to a “whitelist-only” action, review the **“Subject\\Security ID”** for accounts that are outside the allow list.                                                                                                    |
 | **Accounts of different types**: You might want to ensure that certain actions are performed only by certain account types, for example, local or domain account, machine or user account, vendor or employee account, and so on.                                                                                                                                                       | If this event corresponds to an action you want to monitor for certain account types, review the **“Subject\\Security ID”** to see whether the account type is as expected.                                                                   |
 | **External accounts**: You might be monitoring accounts from another domain, or “external” accounts that are not allowed to perform certain actions (represented by certain specific events).                                                                                                                                                                                           | Monitor this event for the **“Subject\\Account Domain”** corresponding to accounts from another domain or “external” accounts.                                                                                                                |
 | **Restricted-use computers or devices**: You might have certain computers, machines, or devices on which certain people (accounts) should not typically perform any actions.                                                                                                                                                                                                            | Monitor the target **Computer:** (or other target device) for actions performed by the **“Subject\\Security ID”** that you are concerned about.                                                                                               |

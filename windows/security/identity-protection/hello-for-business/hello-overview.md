@@ -1,19 +1,21 @@
 ---
-title: Windows Hello for Business (Windows 10)
-description: An overview of Windows Hello for Business 
+title: Windows Hello for Business Overview (Windows 10)
+ms.reviewer: An overview of Windows Hello for Business
+description: Learn how Windows Hello for Business replaces passwords with strong two-factor authentication on PCs and mobile devices in Windows 10.
 keywords: identity, PIN, biometric, Hello, passport
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security, mobile
 audience: ITPro
-author: mikestephens-MS
-ms.author: mstephen
+author: mapalko
+ms.author: mapalko
 manager: dansimp
 ms.collection: M365-identity-device-management
 ms.topic: conceptual
 localizationpriority: medium
 ---
+
 # Windows Hello for Business Overview
 
 **Applies to**
@@ -42,19 +44,18 @@ As an administrator in an enterprise or educational organization, you can create
 
 ## Biometric sign-in
  
- Windows Hello provides reliable, fully integrated biometric authentication based on facial recognition or fingerprint matching. Windows Hello uses a combination of special infrared (IR) cameras and software to increase accuracy and guard against spoofing. Major hardware vendors are shipping devices that have integrated Windows Hello-compatible cameras. Fingerprint reader hardware can be used or added to devices that don’t currently have it. On devices that support Windows Hello, an easy biometric gesture unlocks users’ credentials.
+ Windows Hello provides reliable, fully integrated biometric authentication based on facial recognition or fingerprint matching. Windows Hello uses a combination of special infrared (IR) cameras and software to increase accuracy and guard against spoofing. Major hardware vendors are shipping devices that have integrated Windows Hello-compatible cameras. Fingerprint reader hardware can be used or added to devices that don't currently have it. On devices that support Windows Hello, an easy biometric gesture unlocks users' credentials.
  
 - **Facial recognition**. This type of biometric recognition uses special cameras that see in IR light, which allows them to reliably tell the difference between a photograph or scan and a living person. Several vendors are shipping external cameras that incorporate this technology, and major laptop manufacturers are incorporating it into their devices, as well. 
 - **Fingerprint recognition**. This type of biometric recognition uses a capacitive fingerprint sensor to scan your fingerprint. Fingerprint readers have been available for Windows computers for years, but the current generation of sensors is significantly more reliable and less error-prone. Most existing fingerprint readers (whether external or integrated into laptops or USB keyboards) work with Windows 10. 
 
-Windows stores biometric data that is used to implement Windows Hello securely on the local device only. The biometric data doesn’t roam and is never sent to external devices or servers. Because Windows Hello only stores biometric identification data on the device, there’s no single collection point an attacker can compromise to steal biometric data. 
-
+Windows stores biometric data that is used to implement Windows Hello securely on the local device only. The biometric data doesn't roam and is never sent to external devices or servers. Because Windows Hello only stores biometric identification data on the device, there's no single collection point an attacker can compromise to steal biometric data. For more information about biometric authentication with Windows Hello for Business, see [Windows Hello biometrics in the enterprise](hello-biometrics-in-enterprise.md).
 
 ## The difference between Windows Hello and Windows Hello for Business
 
-- Individuals can create a PIN or biometric gesture on their personal devices for convenient sign-in. This use of Windows Hello is unique to the device on which it is set up, however it is not backed by asymmetric (public/private key) or certificate-based authentication. 
+- Individuals can create a PIN or biometric gesture on their personal devices for convenient sign-in. This use of Windows Hello is unique to the device on which it is set up, but can use a simple password hash depending on an individual's account type. This configuration is referred to as Windows Hello convenience PIN and it is not backed by asymmetric (public/private key) or certificate-based authentication.
 
-- Windows Hello for Business, which is configured by Group Policy or mobile device management (MDM) policy, uses key-based or certificate-based authentication.
+- **Windows Hello for Business**, which is configured by Group Policy or mobile device management (MDM) policy, always uses key-based or certificate-based authentication. This makes it much more secure than **Windows Hello convenience PIN**.
 
 
 ## Benefits of Windows Hello
@@ -91,13 +92,15 @@ For details, see [How Windows Hello for Business works](hello-how-it-works.md).
 
 ## Comparing key-based and certificate-based authentication
 
-Windows Hello for Business can use either keys (hardware or software) or certificates in hardware or software. Enterprises that have a public key infrastructure (PKI) for issuing and managing certificates can continue to use PKI in combination with Windows Hello. Enterprises that do not use PKI or want to reduce the effort associated with managing certificates can rely on key-based credentials for Windows Hello but still use certificates on their domain controllers as a root of trust.
+Windows Hello for Business can use either keys (hardware or software) or certificates in hardware or software. Enterprises that have a public key infrastructure (PKI) for issuing and managing end user certificates can continue to use PKI in combination with Windows Hello. Enterprises that do not use PKI or want to reduce the effort associated with managing user certificates can rely on key-based credentials for Windows Hello but still use certificates on their domain controllers as a root of trust.
 
-
+Windows Hello for Business with a key does not support supplied credentials for RDP. RDP does not support authentication with a key or a self signed certificate. RDP with Windows Hello for Business is supported with certificate based deployments as a supplied credential. Windows Hello for Business key trust can be used with [Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard).
 
 ## Learn more
 
-[Implementing Windows Hello for Business at Microsoft](https://www.microsoft.com/itshowcase/Article/Content/830/Implementing-Windows-Hello-for-Business-at-Microsoft)
+[Implementing strong user authentication with Windows Hello for Business](https://www.microsoft.com/en-us/itshowcase/implementing-strong-user-authentication-with-windows-hello-for-business)
+
+[Implementing Windows Hello for Business at Microsoft](https://www.microsoft.com/en-us/itshowcase/implementing-windows-hello-for-business-at-microsoft)
 
 [Introduction to Windows Hello](https://go.microsoft.com/fwlink/p/?LinkId=786649), video presentation on Microsoft Virtual Academy
 

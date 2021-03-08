@@ -1,18 +1,21 @@
 ---
 title: User Account Control Detect application installations and prompt for elevation (Windows 10)
-description: Describes the best practices, location, values, policy management and security considerations for the User Account Control Detect application installations and prompt for elevation security policy setting.
+description: Learn about best practices and more for the security policy setting, User Account Control Detect application installations and prompt for elevation.
 ms.assetid: 3f8cb170-ba77-4c9f-abb3-c3ed1ef264fc
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # User Account Control: Detect application installations and prompt for elevation
@@ -58,7 +61,7 @@ The following table lists the actual and effective default values for this polic
 | DC Effective Default Settings | Enabled| 
 | Member Server Effective Default Settings| Enabled| 
 | Client Computer Effective Default Settings | Enabled| 
- 
+ 
 ## Policy management
 
 This section describes features and tools that are available to help you manage this policy.

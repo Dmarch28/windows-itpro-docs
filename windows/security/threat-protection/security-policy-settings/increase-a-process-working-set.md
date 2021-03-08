@@ -2,17 +2,20 @@
 title: Increase a process working set (Windows 10)
 description: Describes the best practices, location, values, policy management, and security considerations for the Increase a process working set security policy setting.
 ms.assetid: b742ad96-37f3-4686-b8f7-f2b48367105b
-ms.prod: w10
+ms.reviewer: 
+ms.author: dansimp
+ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: justinha
+author: dansimp
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.date: 04/19/2017
+ms.technology: mde
 ---
 
 # Increase a process working set
@@ -55,7 +58,7 @@ The following table lists the actual and effective default policy values. Defaul
 | Domain Controller Effective Default Settings| Users| 
 | Member Server Effective Default Settings | Users| 
 | Client Computer Effective Default Settings | Users| 
- 
+ 
 ## Policy management
 
 This section describes features, tools, and guidance to help you manage this policy.
